@@ -1,0 +1,153 @@
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    gap: 5.6rem;
+
+    padding: .9rem;
+
+    background-color: var(--cor4);
+    box-shadow: 1px 1px 5px #0000001a;
+    align-items: center;
+}
+
+.cabecalho__logo {
+    width: 8rem;
+}
+
+.menu_hamburguer {
+    display: none;
+}
+
+.cabecalho__direito {   
+    display: flex;
+    gap: 5.6rem;
+}
+
+.cabecalho__pesquisa {
+    display: flex;
+    gap: .5rem;
+}
+
+.input__pesquisa {
+    height: 2rem;
+    width: 18.75rem;
+    padding: 1rem;
+
+    border-radius: .5rem;
+    border: 1px solid #99a2ab;
+}
+
+.input__pesquisa:focus {
+    border: 0;
+    outline: 1px solid var(--cor1);
+}
+
+.login {
+    display: flex;
+    align-items: center;
+}
+
+.login p {
+    color: var(--cor-fonte);
+    font-size: .8em;
+}
+
+.login:hover {
+    cursor: pointer;
+}
+
+.icon__login {
+    width: 1.4rem;
+    padding: .6rem;
+}
+
+.caret {
+    color: var(--cor1);
+}
+
+@keyframes novaAnimacao {
+    0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(-90deg);
+      }
+}
+
+.login:hover .caret {
+    animation: novaAnimacao 1s;
+}
+
+.login:active .caret {
+    color: var(--cor2);
+}
+
+.carrinho {
+    display: flex;
+    align-items: center;
+}
+
+.carrinho:hover {
+    cursor: pointer;
+}
+
+.icon__carrinho {
+    height: 1.4rem;
+    padding: 0rem .6rem;
+}
+
+.carrinho p {
+    color: var(--cor-fonte);
+
+    font-weight: bold;
+    font-size: 1rem;    
+}
+
+.link__carrinho {
+    display: flex;
+}
+
+.notificacao_carrinho {
+    height: .9rem;
+    width: .9rem;
+
+    display: none;
+    justify-content: center;
+    position: relative;
+    bottom: .6rem;
+    left: 1.25rem;
+        
+    color: #fff;
+    background-color: var(--cor6);
+    font-weight: bold;
+    font-size: 0.6rem;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.navegacao {
+    background-color: var(--cor4);
+    border: 1px solid #66738150;
+}
+
+.navegacao__lista {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    
+    padding: .6rem;
+    list-style-type: none;
+}
+
+.lista_tipo {
+    font-size: .9em;
+}
+
+.lista_tipo_link {
+    color: var(--cor-fonte);
+}
+
+.lista_tipo_link:hover {
+    color: var(--cor1);
+    border-bottom: 1px solid var(--cor1);
+}
