@@ -15,10 +15,7 @@ main {
     font-size: .7rem;
 }
 
-.subtitle__link a {
-    font-size: .9rem;
-    color: var(--cor2);
-}
+
 
 .container {
     display: flex;

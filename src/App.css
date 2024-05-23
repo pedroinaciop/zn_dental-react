@@ -4,6 +4,16 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+:root {
+    --cor0: #363863;
+    --cor1: #363889;
+    --cor2: #1C5943;
+    --cor4: #ffffff;
+    --cor5: #000000;
+    --cor6: #ff0101;
+    --cor-fonte: #667381;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

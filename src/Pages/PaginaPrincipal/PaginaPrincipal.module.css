@@ -1,3 +1,8 @@
 .containerPrincipal {
     width: 78rem;
 }
+
+.tituloProdutos {
+	color: var(--cor1);
+	padding: 20px 20px 20px 90px;
+}

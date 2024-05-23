@@ -9,7 +9,6 @@
         "codigo": "A0001",
         "imagem": "https://pedroinaciop.github.io/zndental/images/charisma_diamond.png",
         "alt": "Imagem Resina Charisma Diamond - Kulzer",
-        "quantidade": 15,
         "categoria": "Resina"
     },    
     {
@@ -22,7 +21,6 @@
        "codigo": "A0002",
         "imagem": "https://pedroinaciop.github.io/zndental/images/forma-ultradent.png",
         "alt": "Imagem Forma - Ultradent",
-        "quantidade": 25,
         "categoria": "Resina"
     },
     {
@@ -35,7 +33,6 @@
         "codigo": "A0003",
         "imagem": "https://pedroinaciop.github.io/zndental/images/resina-omega.png",
         "alt": "Imagem Estelite Omega - Tokuyama",
-        "quantidade": 5,
         "categoria": "Resina"
     },
     {
@@ -48,7 +45,6 @@
         "codigo": "A0004",
         "imagem": "https://pedroinaciop.github.io/zndental/images/resina-palfique.png",
         "alt": "Imagem Resina Palfique Mini Lx5 - Tokuyama",
-        "quantidade": 8,
         "categoria": "Resina"
     },
     {
@@ -61,7 +57,6 @@
         "codigo": "A0005",
         "imagem": "https://pedroinaciop.github.io/zndental/images/resina-opallis-fgm.png",
         "alt": "Imagem Resina Opallis - FGM",
-        "quantidade": 9,
         "categoria": "Resina"
     },
     {
@@ -74,7 +69,6 @@
         "codigo": "A0006",
         "imagem": "https://pedroinaciop.github.io/zndental/images/jeltrate-plus.jpg",
         "alt": "Imagem Alginato Tipo I Jeltrate Plus - Dentsply Sirona",
-        "quantidade": 60,
         "categoria": "Alginato"
     },
     {
@@ -87,7 +81,6 @@
         "codigo": "A0007",
         "imagem": "https://pedroinaciop.github.io/zndental/images/jeltrate-dustless.png",
         "alt": "Imagem Alginato Tipo II Jeltrate Dustless - Dentsply Sirona",
-        "quantidade": 80,
         "categoria": "Alginato"
     },
     {
@@ -100,7 +93,6 @@
         "codigo": "A0008",
         "imagem": "https://pedroinaciop.github.io/zndental/images/avagel.jpg",
         "alt": "Imagem Alginato Tipo II Jeltrate Dustless - Dentsply Sirona",
-        "quantidade": 120,
         "categoria": "Alginato"
     },
     {
@@ -113,7 +105,6 @@
         "codigo": "A0009",
         "imagem": "https://pedroinaciop.github.io/zndental/images/ezact-kromm.jpg",
         "alt": "Imagem Alginato Ezact Kromm - Vigodent",
-        "quantidade": 40,
         "categoria": "Alginato"
     },
     {
@@ -126,7 +117,6 @@
         "codigo": "A0010",
         "imagem": "https://pedroinaciop.github.io/zndental/images/hydrogum-5.jpg",
         "alt": "Imagem Alginato Hydrogum 5 Tipo I - Zhermack",
-        "quantidade": 40,
         "categoria": "Alginato"
     }
 ]
