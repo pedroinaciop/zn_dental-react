@@ -1,19 +1,21 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import './App.css';
-import NaoEncontrada from './components/NaoEncontrada';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PaginaPrincipal from "./Pages/PaginaPrincipal";
+import NaoEncontrada from "./Pages/NaoEncontrada";
+import Header from "./components/Header";
+import Cadastro from "./Pages/Cadastro";
+import Carrinho from "./Pages/Carrinho";
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header></Header>
-      
-      <Routes>
-        <Route path="">
-          <Route path="/teste" element={<h1>Teste</h1>}/>
-        </Route>
+      <Header />
 
-        <Route path="*" element={<NaoEncontrada />}/>
+      <Routes>
+        <Route path="" element={<PaginaPrincipal />} />
+        <Route path="*" element={<NaoEncontrada />} />
+        <Route path="/cadastro" element={<Cadastro/>} />
+        <Route path="/carrinho" element={<Carrinho />} />
       </Routes>
     </BrowserRouter>
   );
