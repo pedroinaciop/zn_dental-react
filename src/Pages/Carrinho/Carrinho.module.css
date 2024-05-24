@@ -4,7 +4,8 @@
 
 .container_carrinho {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 
 	height: 5.6rem;
 	width: 37.5rem;
@@ -66,7 +67,7 @@
 }
 
 .container_calculo {
-	height: 19.3rem;
+	height: 17rem;
 	width: 18.75rem;
 	border-radius: .6rem;
 	padding: 1.8rem;
@@ -109,4 +110,5 @@
 
 .aviso {
 	color: var(--cor-fonte);
+	line-height: 19px;
 }

@@ -15,8 +15,6 @@ main {
     font-size: .7rem;
 }
 
-
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +25,7 @@ main {
 }
 
 .container__nicho {
-    height: 27rem;
+    height: 26rem;
     width: 11rem;
     padding: .6rem;
 
