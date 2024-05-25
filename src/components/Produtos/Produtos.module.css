@@ -67,10 +67,19 @@ main {
     gap: .3rem;
 }
 
+a {
+    color: var(--cor0);
+}
+
+a:hover {
+    color: var(--cor1);
+    text-decoration: underline;
+}
+
 .descricao {
     height: 1.8rem;
 
-    color: #667381;
+    color: var(--cor-fonte);
     font-size: .7em;
 }
 

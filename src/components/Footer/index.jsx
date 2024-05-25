@@ -1,10 +1,21 @@
+import logo from "../../assets/images/logo-zn.png"
+import billet from "../../assets/images/icons/ic-billet.svg";
+import amex from "../../assets/images/icons/ic-amex.svg";
+import hiperCard from "../../assets/images/icons/ic-hiperCard.svg";
+import elo from "../../assets/images/icons/ic-elo.svg";
+import visa from "../../assets/images/icons/ic-visa.svg";
+import masterCard from "../../assets/images/icons/ic-master.svg";
+import instagram from "../../assets/images/icons/icon-instagram.png";
+import linkedIn from "../../assets/images/icons/icon-linkedin.png";
+import tiktok from "../../assets/images/icons/icon-tiktok.png";
+import twitter from "../../assets/images/icons/icon-twitter.png";
 import styled from "./Footer.module.css";
 
 const Footer = () => {
 	return (
 		<footer className={styled.rodape}>
 			<div className={styled.rodape__informacoes}>
-				<img src="/assets/images/logo-zn.png" alt="" className={styled.cabecalho__logo} />
+				<img src={logo} alt="" className={styled.cabecalho__logo} />
 				<ul className={styled.rodape__container}>
 					<li className={styled.rodape__container__titulo}>Ajuda</li>
 					<li className={styled.rodape__container_item}>Assistente Virtual</li>
@@ -23,22 +34,22 @@ const Footer = () => {
 					<li className={styled.rodape__container__titulo}>Formas de Pagamento</li>
 					<div className={styled.rodape__container__pagamentos}>
 						<li>
-							<img src="/assets/images/icons/ic-billet.svg" alt="" />
+							<img src={billet} alt="" />
 						</li>
 						<li>
-							<img src="/assets/images/icons/ic-amex.svg" alt="" />
+							<img src={amex} alt="" />
 						</li>
 						<li>
-							<img src="/assets/images/icons/ic-elo.svg" alt="" />
+							<img src={elo} alt="" />
 						</li>
 						<li>
-							<img src="/assets/images/icons/ic-hiperCard.svg" alt="" />
+							<img src={hiperCard} alt="" />
 						</li>
 						<li>
-							<img src="/assets/images/icons/ic-visa.svg" alt="" />
+							<img src={visa} alt="" />
 						</li>
 						<li>
-							<img src="/assets/images/icons/ic-master.svg" alt="" />
+							<img src={masterCard} alt="" />
 						</li>
 					</div>
 					<li className={styled.rodape__container_item}>Cartão de Crédito</li>
@@ -60,7 +71,7 @@ const Footer = () => {
 						<li>
 							<a href="#">
 								<img
-									src="/assets/images/icons/icon-instagram.png"
+									src={instagram}
 									alt="Logo do Instagram"
 								/>
 							</a>
@@ -68,20 +79,21 @@ const Footer = () => {
 						<li>
 							<a href="#">
 								<img
-									src="/assets/images/icons/icon-linkedin.png"
+									src={linkedIn}
 									alt="Logo do LinkedIn"
 								/>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="/assets/images/icons/icon-tiktok.png" alt="Logo do TikTok" />
+								<img src={tiktok} 
+								alt="Logo do TikTok" />
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img
-									src="/assets/images/icons/icon-twitter.png"
+									src={twitter}
 									alt="Logo do Twitter"
 								/>
 							</a>

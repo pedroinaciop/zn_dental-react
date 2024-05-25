@@ -1,3 +1,6 @@
+import carrinho from "../../assets/images/icons/icon-carrinho.png";
+import cadastro from "../../assets/images/icons/icon-login.png";
+import logo from "../../assets/images/logo-zn.png";
 import { NavLink } from 'react-router-dom';
 import styled from './Header.module.css';
 
@@ -17,7 +20,7 @@ const Header = () => {
                 <img className={styled.menu_hamburguer} src="assets/images/burger-bar.png" alt="Menu de opções"/>
              
                 <NavLink to={"/"}>
-                    <img src="assets/images/logo-zn.png" alt="Logo da ZN Dental" className={styled.cabecalho__logo}/>
+                    <img src={logo} alt="Logo da ZN Dental" className={styled.cabecalho__logo}/>
                 </NavLink>
 
             <div className={styled.elementos__cabecalho}>
@@ -27,7 +30,7 @@ const Header = () => {
             <div className={styled.cabecalho__direito}>
                 <NavLink to={"/cadastro"}>
                 <div className={styled.login}>
-                        <img src="assets/images/icons/icon-login.png" alt="Ícone Login" className={styled.icon__login}/>
+                        <img src={cadastro} alt="Ícone Login" className={styled.icon__login}/>
                         <div className={styled.elementos__cabecalho}>
                             <p>Olá,</p>
                             <p><strong>Faça seu conta</strong></p>
@@ -40,7 +43,7 @@ const Header = () => {
                 <NavLink to={"/carrinho"} className={styled.link__carrinho}>
                     <span className={styled.notificacao_carrinho}></span>
 
-                    <img src="assets/images/icons/icon-carrinho.png" alt="Ícone Carrinho" className={styled.icon__carrinho}/>
+                    <img src={carrinho} alt="Ícone Carrinho" className={styled.icon__carrinho}/>
                     <p className={styled.elementos__cabecalho}>Carrinho</p>
                 </NavLink>
             </div>

@@ -6,7 +6,7 @@ const Carrinho = () => {
             
             <section className={styled.container_view_carrinho}>
                 <section className={styled.container_carrinho} /*className={styled.container_carrinho_vazio}*/>
-                    <img className={styled.imagem_carrinho_vazio} src="/assets/images/carrinho-vazio.png" alt=""/>
+                    <img className={styled.imagem_carrinho_vazio} src="/assets/images/carrinho-vazio.svg" alt="Ícone do carrinho vazio"/>
                     <p className={styled.texto_carrinho_vazio}>Carrinho vazio</p>
                 </section>
             </section>
