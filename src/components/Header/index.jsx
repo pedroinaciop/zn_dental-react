@@ -24,7 +24,7 @@ const Header = () => {
                 </NavLink>
 
             <div className={styled.elementos__cabecalho}>
-                <input type="search" placeholder="Digite o que você procura" className={styled.input__pesquisa}/>
+                <input type="search" placeholder="Digite o que você procura" className={styled.input__pesquisa} id="search" name="search"/>
             </div>
 
             <div className={styled.cabecalho__direito}>

@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { CarrinhoProvider } from "./context/CarrinhoContext";
 import PaginaPrincipal from "./Pages/PaginaPrincipal";
 import NaoEncontrada from "./Pages/NaoEncontrada";
 import Footer from "./components/Footer";
@@ -11,6 +12,8 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
+    <CarrinhoProvider>
+
       <Header />
 
       <Routes>
@@ -22,6 +25,8 @@ function App() {
       </Routes>
       
       <Footer />
+      
+    </CarrinhoProvider>
     </BrowserRouter>
   );
 }

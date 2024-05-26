@@ -1,8 +1,24 @@
-import { NavLink } from 'react-router-dom';
+import { CarrinhoContext } from '../../context/CarrinhoContext';
 import materiais from "../../json/produtos.json";
 import styled from "./Produtos.module.css";
+import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
 
-const Produtos = () => {    
+const Produtos = () => {
+    const { carrinho, setCarrinho } = useContext(CarrinhoContext);
+
+    function AdicionarAoCarrinho(item, quantidade) {
+        const novoCarrinho = [...carrinho];
+        const existindoIdProduto = novoCarrinho.findIndex((i) => i.id === item.id);
+        console.log(novoCarrinho);
+
+        if (existindoIdProduto === -1) {
+          setCarrinho([...novoCarrinho, { ...item, quantidade }]);
+        } else {
+          novoCarrinho[existindoIdProduto].quantidade += quantidade;
+          setCarrinho(novoCarrinho);
+        }
+    }
 
     return (
         <section className={styled.container}>
@@ -10,11 +26,7 @@ const Produtos = () => {
                 return (
                     <div key={material.id} className={styled.container__nicho}>
                         <div className={styled.nicho__imagem}>
-                            <img
-                                className={styled.nicho__imagem__img}
-                                src={material.imagem}
-                                alt={material.alt}
-                            />
+                            <img className={styled.nicho__imagem__img} src={material.imagem} alt={material.alt} />
                         </div>
                         <div className={styled.nicho__informacoes}>
                             <p className={styled.nome_produto}>
@@ -33,17 +45,16 @@ const Produtos = () => {
                             </div>
                             <div className={styled.container_precos_atuais}>
                                 <p>R$</p>
-                                <p className={styled.preco_atual}>
-                                    {material.preco.toFixed(2)}
-                                </p>
+                                <p className={styled.preco_atual}>{material.preco.toFixed(2)}</p>
                             </div>
-                            <p className={styled.codigo_produto}>
-                                (Cód. ${material.codigo})
-                            </p>
+                            <p className={styled.codigo_produto}>(Cód. ${material.codigo})</p>
                         </div>
-                        <button type="submit" className={styled.comprar}>
-                            Adicionar
-                        </button>
+                        <button type="button"
+                            className={styled.comprar} onClick={() => AdicionarAoCarrinho({
+                                id: material.id, nome_produto: material.nome_produto,
+                                marca: material.marca, preco: material.preco, 
+                                codigo: material.codigo, imagem: material.imagem, alt: material.alt,
+                            }, 1)}>Adicionar</button>
                     </div>
                 );
             })}
@@ -54,9 +65,9 @@ const Produtos = () => {
 export default Produtos;
 
 
-   // const [carrinho, setCarrinho] = useState([]);
+// const [carrinho, setCarrinho] = useState([]);
 
-    //   const adicionarAoCarrinho = (item, quantidade) => {
+//   const adicionarAoCarrinho = (item, quantidade) => {
     //     const novoCarrinho = [...carrinho];
     //     const existindoIdProduto = novoCarrinho.findIndex((i) => i.id === item.id);
     //     console.log(novoCarrinho);
@@ -69,14 +80,14 @@ export default Produtos;
     //     }
     //   };
 
-    //     adicionarAoCarrinho({
-    //         id: material.id,
-    //         nome_produto: material.nome_produto,
-    //         marca: material.marca,
-    //         descricao: material.descricao,
-    //         preco_anterior: material.preco_anterior,
-    //         preco: material.preco,
-    //         codigo: material.codigo,
-    //         imagem: material.imagem,
-    //         alt: material.alt,
-    //         categoria: material.categoria}, 1)}>
+//     adicionarAoCarrinho({
+//         id: material.id,
+//         nome_produto: material.nome_produto,
+//         marca: material.marca,
+//         descricao: material.descricao,
+//         preco_anterior: material.preco_anterior,
+//         preco: material.preco,
+//         codigo: material.codigo,
+//         imagem: material.imagem,
+//         alt: material.alt,
+//         categoria: material.categoria}, 1)}>

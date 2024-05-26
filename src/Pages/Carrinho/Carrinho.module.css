@@ -4,8 +4,10 @@
 
 .container_carrinho {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
+	justify-content: center;
+	gap: 20px;
 
 	height: 5.6rem;
 	width: 37.5rem;
@@ -29,29 +31,33 @@
 }
 
 .produto_valor_carrinho {
+	font-size: 1.5rem;
 	text-align: center;
 	padding: .9rem 0rem;
 }
 
-.produto_remover {
-	height: 1.2rem;
-	width: 1.2rem;
+.btn_excluir_produto {
+	height: 1.5rem;
+	width: 1.5rem;
+	align-self: start;
 
 	margin-top: .3rem;
 
 	cursor: pointer;
 }
 
+/*-----------------------------------------------------------------*/
+
 .container_carrinho_vazio {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	gap: .6rem;
 }
 
 .imagem_carrinho_vazio {
 	height: 4.3rem;
 	width: 4.3rem;
+	align-self: center;
 }
 
 .texto_carrinho_vazio {
@@ -59,12 +65,7 @@
 	font-weight: bold;
 }
 
-.btn_excluir_produto {
-	height: 1.8rem;
-	width: 1.8rem;
-
-	cursor: pointer;
-}
+/*--------------------------------------------------*/
 
 .container_calculo {
 	height: 17rem;
