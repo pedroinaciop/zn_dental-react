@@ -1,10 +1,14 @@
-import carrinho from "../../assets/images/icons/icon-carrinho.png";
-import cadastro from "../../assets/images/icons/icon-login.png";
+import iconCarrinho from "../../../src/assets/images/icons/icon-carrinho.png";
+import { CarrinhoContext } from "../../context/CarrinhoContext";
+import iconCadastro from "../../assets/images/icons/icon-login.png";
 import logo from "../../assets/images/logo-zn.png";
 import { NavLink } from 'react-router-dom';
 import styled from './Header.module.css';
+import { useContext } from "react";
 
 const Header = () => {
+    const { carrinho } = useContext(CarrinhoContext);
+
     return (
         <header>      
             <nav className={styled.navegacao}>
@@ -30,7 +34,7 @@ const Header = () => {
             <div className={styled.cabecalho__direito}>
                 <NavLink to={"/cadastro"}>
                 <div className={styled.login}>
-                        <img src={cadastro} alt="Ícone Login" className={styled.icon__login}/>
+                        <img src={iconCadastro} alt="Ícone Login" className={styled.icon__login}/>
                         <div className={styled.elementos__cabecalho}>
                             <p>Olá,</p>
                             <p><strong>Faça seu conta</strong></p>
@@ -43,8 +47,10 @@ const Header = () => {
                 <NavLink to={"/carrinho"} className={styled.link__carrinho}>
                     <span className={styled.notificacao_carrinho}></span>
 
-                    <img src={carrinho} alt="Ícone Carrinho" className={styled.icon__carrinho}/>
-                    <p className={styled.elementos__cabecalho}>Carrinho</p>
+                    <img src={iconCarrinho} alt="Ícone Carrinho" className={styled.icon__carrinho}/>
+                    <p className={styled.elementos__cabecalho}>
+                        Carrinho {carrinho.length === 0 ? null : carrinho.length}
+                    </p>
                 </NavLink>
             </div>
         </section>
