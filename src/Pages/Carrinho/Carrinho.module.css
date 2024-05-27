@@ -36,10 +36,17 @@
 	padding: .9rem 0rem;
 }
 
+.produto_quantidade {
+	width: 100px;
+} 
+
+.abreviacao {
+	align-self: start;
+}
+
 .btn_excluir_produto {
 	height: 1.5rem;
 	width: 1.5rem;
-	align-self: start;
 
 	margin-top: .3rem;
 

@@ -1,11 +1,12 @@
 import carrinhoVazio from "../../../src/assets/images/carrinho-vazio.svg";
 import { CarrinhoContext } from "../../../src/context/CarrinhoContext";
-import styled from './Carrinho.module.css';
-import { useContext } from "react";
 import remover from "../../../src/assets/images/lata-de-lixo.png"
+import styled from './Carrinho.module.css';
+import { useContext, useEffect, useState } from "react";
 
 const Carrinho = () => {
     const { carrinho, setCarrinho } = useContext(CarrinhoContext);
+    const { total } = useState();
 
     function removerDoCarrinho(produto) {
         const index = carrinho.findIndex(item => item.id === produto.id);
@@ -15,6 +16,11 @@ const Carrinho = () => {
             setCarrinho(novoCarrinho);
         }
     }
+
+    useEffect(() => {
+        total = carrinho.reduce((valorAnterior, valorAtual) => valorAnterior + valorAtual.preco, 0);
+        console.log(total);
+    }, [carrinho]);
 
     return (
         <main className={styled.container_principal}>
@@ -31,14 +37,16 @@ const Carrinho = () => {
                             <section key={produto.id} className={styled.container_carrinho}>
                                 <img src={produto.imagem} alt="" className={styled.produto_imagem_carrinho} />
                                 <div className={styled.produto_informacoes}>
-                                    <h3 className={styled.produto_nome_carrinho}>{produto.nome_produto}</h3>
+                                    <h3 className={styled.produto_nome_carrinho}>{produto.nome_produto} - {produto.marca}</h3>
                                     <p className={styled.produto_codigo_carrinho}>(Cód. {produto.codigo})</p>
                                 </div>
                                 <div className={styled.container_preco}>
                                     <input type="number" className={styled.produto_quantidade} />
                                     <h3 className={styled.produto_valor_carrinho}>R$ {produto.preco}</h3>
                                 </div>
-                                <img src={remover} className={styled.btn_excluir_produto} alt="" onClick={() => removerDoCarrinho(produto)}></img>
+                                <abbr title="Remover item do carrinho" className={styled.abreviacao}>
+                                    <img src={remover} className={styled.btn_excluir_produto} alt="Ícone excluir item" onClick={() => removerDoCarrinho(produto)}></img>
+                                </abbr>
                             </section>
                         )
                     })}
@@ -52,7 +60,7 @@ const Carrinho = () => {
                 </div>
                 <div className={styled.calculo}>
                     <p>Total</p>
-                    <h4 className={styled.valores}>R$0.00</h4>
+                    <h4 className={styled.valores}>R$ {total}</h4>
                 </div>
                 <button className={styled.btn_finalizar_compra}>Concluir Pedido</button>
                 <p className={styled.aviso}>

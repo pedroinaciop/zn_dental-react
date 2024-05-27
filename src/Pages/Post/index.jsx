@@ -16,6 +16,7 @@ const Post = () => {
 
     return (
         <main className={styled.container_material}>
+            
             <figure className={styled.left_container}>
                 <img className={styled.img_material} src={material.imagem} alt={material.alt}/>
             </figure>
@@ -41,7 +42,6 @@ const Post = () => {
             </section>
             
         </main>
-        
     )
 }
 
