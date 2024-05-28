@@ -1,26 +1,10 @@
 import carrinhoVazio from "../../../src/assets/images/carrinho-vazio.svg";
-import { CarrinhoContext } from "../../../src/context/CarrinhoContext";
+import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
 import remover from "../../../src/assets/images/lata-de-lixo.png"
 import styled from './Carrinho.module.css';
-import { useContext, useEffect, useState } from "react";
 
 const Carrinho = () => {
-    const { carrinho, setCarrinho } = useContext(CarrinhoContext);
-    const { total } = useState();
-
-    function removerDoCarrinho(produto) {
-        const index = carrinho.findIndex(item => item.id === produto.id);
-        if (index !== -1) {
-            const novoCarrinho = [...carrinho];
-            novoCarrinho.splice(index, 1);
-            setCarrinho(novoCarrinho);
-        }
-    }
-
-    useEffect(() => {
-        total = carrinho.reduce((valorAnterior, valorAtual) => valorAnterior + valorAtual.preco, 0);
-        console.log(total);
-    }, [carrinho]);
+    const { carrinho, quantidade, handleChange, removerDoCarrinho } = useCarrinhoContext();
 
     return (
         <main className={styled.container_principal}>
@@ -41,7 +25,7 @@ const Carrinho = () => {
                                     <p className={styled.produto_codigo_carrinho}>(Cód. {produto.codigo})</p>
                                 </div>
                                 <div className={styled.container_preco}>
-                                    <input type="number" className={styled.produto_quantidade} />
+                                    <input type="number" value={produto.quantidade} onChange={handleChange} min={0} max={999} className={styled.produto_quantidade} />
                                     <h3 className={styled.produto_valor_carrinho}>R$ {produto.preco}</h3>
                                 </div>
                                 <abbr title="Remover item do carrinho" className={styled.abreviacao}>
@@ -56,11 +40,11 @@ const Carrinho = () => {
                 <h3>Resumo da compra</h3>
                 <div className={styled.calculo}>
                     <p>Descontos</p>
-                    <h4 className={styled.valores}>R$0.00</h4>
+                    <h4 className={styled.valores}>R$ 0.00</h4>
                 </div>
                 <div className={styled.calculo}>
                     <p>Total</p>
-                    <h4 className={styled.valores}>R$ {total}</h4>
+                    <h4 className={styled.valores}>R$ 0.00</h4>
                 </div>
                 <button className={styled.btn_finalizar_compra}>Concluir Pedido</button>
                 <p className={styled.aviso}>

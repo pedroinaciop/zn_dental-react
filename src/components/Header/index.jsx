@@ -20,9 +20,7 @@ const Header = () => {
                 </ul>
             </nav>
 
-            <section className={styled.cabecalho}>  
-                <img className={styled.menu_hamburguer} src="assets/images/burger-bar.png" alt="Menu de opções"/>
-             
+            <section className={styled.cabecalho}>              
                 <NavLink to={"/"}>
                     <img src={logo} alt="Logo da ZN Dental" className={styled.cabecalho__logo}/>
                 </NavLink>
@@ -45,11 +43,12 @@ const Header = () => {
 
             <div className={styled.carrinho}>
                 <NavLink to={"/carrinho"} className={styled.link__carrinho}>
-                    <span className={styled.notificacao_carrinho}></span>
-
                     <img src={iconCarrinho} alt="Ícone Carrinho" className={styled.icon__carrinho}/>
                     <p className={styled.elementos__cabecalho}>
-                        Carrinho {carrinho.length === 0 ? null : carrinho.length}
+                        Carrinho 
+                    </p>
+                    <p className={styled.quantidade_carrinho}>
+                        {carrinho.length === 0 ? null : carrinho.length}
                     </p>
                 </NavLink>
             </div>

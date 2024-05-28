@@ -1,25 +1,10 @@
-import { CarrinhoContext } from "../../context/CarrinhoContext";
 import materiais from "../../json/produtos.json";
 import styled from "./Produtos.module.css";
 import { NavLink } from "react-router-dom";
-import React, { useContext } from "react";
+import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
 
 const Produtos = () => {
-    const { carrinho, setCarrinho } = useContext(CarrinhoContext);
-
-    function AdicionarAoCarrinho(item, quantidade) {
-        const novoCarrinho = [...carrinho];
-        const existindoIdProduto = novoCarrinho.findIndex(
-            (i) => i.id === item.id,
-        );
-
-        if (existindoIdProduto === -1) {
-            setCarrinho([...novoCarrinho, { ...item, quantidade }]);
-        } else {
-            novoCarrinho[existindoIdProduto].quantidade += quantidade;
-            setCarrinho(novoCarrinho);
-        }
-    }
+    const { AdicionarAoCarrinho } = useCarrinhoContext();
 
     return (
         <section className={styled.container}>
@@ -58,24 +43,17 @@ const Produtos = () => {
                                 (Cód. ${material.codigo})
                             </p>
                         </div>
-                        <button
-                            type="button"
-                            className={styled.comprar}
-                            onClick={() =>
-                                AdicionarAoCarrinho(
-                                    {
-                                        id: material.id,
-                                        nome_produto: material.nome_produto,
-                                        marca: material.marca,
-                                        preco: material.preco,
-                                        codigo: material.codigo,
-                                        imagem: material.imagem,
-                                        alt: material.alt,
-                                    },
-                                    1,
-                                )
-                            }
-                        >
+                        <button type="button" className={styled.comprar}
+                            onClick={() => AdicionarAoCarrinho(
+                                {
+                                    id: material.id,
+                                    nome_produto: material.nome_produto,
+                                    marca: material.marca,
+                                    preco: material.preco,
+                                    codigo: material.codigo,
+                                    imagem: material.imagem,
+                                    alt: material.alt,
+                                }, 1)}>
                             Adicionar
                         </button>
                     </div>
