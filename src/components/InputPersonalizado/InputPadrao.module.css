@@ -1,0 +1,10 @@
+.dados {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+}
+
+input:read-only {
+	background-color: rgba(0, 0, 0, 0.094);
+}

@@ -1,93 +1,205 @@
 import styled from "./Cadastro.module.css";
+import InputPersonalizado from "../../components/InputPersonalizado";
 
 const Cadastro = () => {
     return (
         <form action="" className={styled.formulario}>
             <h1 className={styled.titulo_formulario}>Cadastre-se</h1>
 
-                <div className={styled.container__dados}>
-                    <div className={styled.dados}>
-                        <label htmlFor="email">E-mail</label>
-                        <input type="email" id="email" size="40" maxLength="40" required/>
-                    </div>
-                    <div className={styled.dados}>
-                        <label htmlFor="senha">Senha</label>
-                        <input type="password" id="senha" size="40" maxLength="40" required/>
-                    </div>
+            <div className={styled.container__dados}>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="E-mail"
+                        type="email"
+                        id="email"
+                        size="40"
+                        maxLength="40"
+                        placeholder="Insira seu e-mail"
+                        required={true}
+                    />
                 </div>
-
-                <div className={styled.container__dados}>
-                    <div className={styled.dados}>
-                        <label htmlFor="nome">Nome</label>
-                        <input type="text" id="nome" size="40" maxLength="40" required/>
-                    </div>
-                    <div className={styled.dados}>
-                        <label htmlFor="sobrenome">Sobrenome</label>
-                        <input type="text" id="sobrenome" size="40" maxLength="40" required/>
-                    </div>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Senha"
+                        type="password"
+                        id="senha"
+                        size="40"
+                        maxLength="40"
+                        required={true}
+                    />
                 </div>
+            </div>
 
-                <div className={styled.container__dados}>
-                    <div className={styled.dados}>
-                        <label htmlFor="cpf">CPF</label>
-                        <input type="text" id="cpf" placeholder="___.___.___-__" size="40" /*onInput="mascara(this, 'cpf')"*//>
-                    </div>
-                    <div className={styled.dados}>
-                        <label htmlFor="nascimento">Data de Nascimento</label>
-                        <input type="date" id="nascimento" required/>
-                    </div>
-                    <div className={styled.dados}>
-                        <label htmlFor="sexo">Sexo</label>
-                        <select id="sexo" required>
-                            <option value="Masculino">Masculino</option>
-                            <option value="Feminino">Feminino</option>
-                            <option value="Não especificado">Não especificado</option>
-                        </select>
-                    </div>
-                    </div>
+            <div className={styled.container__dados}>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Nome"
+                        type="text"
+                        id="nome"
+                        size="40"
+                        maxLength="40"
+                        placeholder="Insira seu nome"
+                        required={true}
+                    />
+                </div>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Sobrenome"
+                        type="text"
+                        id="sobrenome"
+                        size="40"
+                        maxLength="40"
+                        placeholder="Insira seu sobrenome"
+                        required={true}
+                    />
+                </div>
+            </div>
 
-                    <div className={styled.container__dados}>
-                        <div className={styled.dados}>
-                            <label htmlFor="celular">Celular</label>
-                            <input type="text" id="celular" placeholder="(__)_____-____" size="40" /*onInput="mascara(this, 'tel')"*//>
-                        </div>
-                    </div>
+            <div className={styled.container__dados}>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="CPF"
+                        type="text"
+                        id="cpf"
+                        size="40"
+                        maxLength="40"
+                        placeholder="___.___.___-__"
+                        required={true}
+                    />
+                </div>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Data de Nascimento"
+                        type="date"
+                        id="data"
+                        required={true}
+                    />
+                </div>
+                <div className={styled.dados}>
+                    <label htmlFor="sexo">Sexo</label>
+                    <select id="sexo" required>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Não especificado">
+                            Não especificado
+                        </option>
+                    </select>
+                </div>
+            </div>
 
-                    <div className={styled.container__dados}>
-                        <div className={styled.dados}>
-                            <label htmlFor="cep">CEP</label>
-                            <input type="text" id="cep" placeholder="_____-___" size="60" /*onInput="mascara(this, 'cep')"*//>
-                        </div>
-                        <div className={styled.dados}>
-                            <label htmlFor="uf">UF</label>
-                            <input type="text" id="uf" size="20" readOnly/> 
-                        </div>
-                    </div>
+            <div className={styled.container__dados}>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Telefone"
+                        type="text"
+                        id="celular"
+                        size="40"
+                        maxLength="40"
+                        placeholder="____-____"
+                        required={true}
+                    />
+                </div>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="WhatsApp"
+                        type="text"
+                        id="whatsapp"
+                        size="40"
+                        maxLength="40"
+                        placeholder="(__)_____-____"
+                        required={true}
+                    />
+                </div>
+            </div>
 
-                    <div className={styled.container__dados}>
-                        <div className={styled.dados}>
-                            <label htmlFor="logradouro">Endereço</label>
-                            <input type="text" id="logradouro" size="40" readOnly/>
-                        </div>
-                        <div className={styled.dados}>
-                            <label htmlFor="complemento">Complemento</label>
-                            <input type="text" id="complemento" size="40" maxLength="30" required/>
-                        </div>
-                    </div>
+            <div className={styled.container__dados}>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="CEP"
+                        type="text"
+                        id="cep"
+                        size="5"
+                        maxLength="40"
+                        placeholder="_____-___"
+                        required={true}
+                    />
+                </div>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Endereço"
+                        type="text"
+                        id="logradouro"
+                        size="45"
+                        maxLength="40"
+                        required={true}
+                        readOnly={true}
+                    />
+                </div>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Número"
+                        type="text"
+                        id="numero"
+                        size="20"
+                        maxLength="20"
+                        required={true}
+                        readOnly={true}
+                    />
+                </div>
+            </div>
+            <div className={styled.container__dados}>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="UF"
+                        type="text"
+                        id="uf"
+                        size="5"
+                        maxLength="40"
+                        required={true}
+                        readOnly={true}
+                    />
+                </div>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Estado"
+                        type="text"
+                        id="localidade"
+                        size="45"
+                        maxLength="40"
+                        required={true}
+                        readOnly={true}
+                    />
+                </div>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Bairro"
+                        type="text"
+                        id="bairro"
+                        size="20"
+                        maxLength="40"
+                        required={true}
+                        readOnly={true}
+                    />
+                </div>
+            </div>
 
-                    <div className={styled.container__dados}>
-                        <div className={styled.dados}>
-                            <label htmlFor="bairro">Bairro</label>
-                            <input type="text" id="bairro" size="40" readOnly/>
-                        </div>
-                        <div className={styled.dados}>
-                            <label htmlFor="localidade">Estado</label>
-                            <input type="text" id="localidade" size="40" readOnly/>
-                        </div>      
-                    </div>
-                <button type="submit" className={styled.cadastrar}>CADASTRAR</button>
-            </form>  
-    )
-}
+            <div className={styled.container__dados}>
+                <div className={styled.dados}>
+                    <InputPersonalizado
+                        titulo="Complemento"
+                        type="text"
+                        id="complemento"
+                        size="97"
+                        maxLength="30"
+                        required={true}
+                    />
+                </div>
+            </div>
+            <button type="submit" className={styled.cadastrar}>
+                CADASTRAR
+            </button>
+        </form>
+    );
+};
 
 export default Cadastro;

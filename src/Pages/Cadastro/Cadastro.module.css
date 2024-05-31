@@ -2,7 +2,7 @@
 	display: block;
 	margin: auto;
 
-	height: 36rem;
+	height: 38rem;
 	width: 40rem;
 
 	margin-top: 1.5em;
@@ -36,6 +36,7 @@
 .dados {
 	display: flex;
 	flex-direction: column;
+	gap: 5px;
 }
 
 .dados__whats {
@@ -68,10 +69,6 @@ select {
 	border: .5px solid var(--cor-fonte);
 	border-radius: .6rem;
 	padding: 0.2em .6em;
-}
-
-input:read-only {
-	background-color: rgba(0, 0, 0, 0.094);
 }
 
 .cadastrar {

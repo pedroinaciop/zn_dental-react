@@ -4,7 +4,7 @@ import remover from "../../../src/assets/images/lata-de-lixo.png"
 import styled from './Carrinho.module.css';
 
 const Carrinho = () => {
-    const { carrinho, quantidade, handleChange, removerDoCarrinho } = useCarrinhoContext();
+    const { carrinho, handleChange, removerDoCarrinho } = useCarrinhoContext();
 
     return (
         <main className={styled.container_principal}>
