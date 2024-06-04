@@ -4,7 +4,7 @@ import remover from "../../../src/assets/images/lata-de-lixo.png"
 import styled from './Carrinho.module.css';
 
 const Carrinho = () => {
-    const { carrinho, handleChange, removerDoCarrinho } = useCarrinhoContext();
+    const { carrinho, handleChange, removerDoCarrinho, totalCarrinho } = useCarrinhoContext();
 
     return (
         <main className={styled.container_principal}>
@@ -44,7 +44,7 @@ const Carrinho = () => {
                 </div>
                 <div className={styled.calculo}>
                     <p>Total</p>
-                    <h4 className={styled.valores}>R$ 0.00</h4>
+                    <h4 className={styled.valores}>R$ {totalCarrinho.toFixed(2)}</h4>
                 </div>
                 <button className={styled.btn_finalizar_compra}>Concluir Pedido</button>
                 <p className={styled.aviso}>

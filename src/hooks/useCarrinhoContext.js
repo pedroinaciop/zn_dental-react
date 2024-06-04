@@ -1,9 +1,10 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CarrinhoContext } from "../context/CarrinhoContext";
 
 export const useCarrinhoContext = () => {
     const { carrinho, setCarrinho } = useContext(CarrinhoContext);
     const { quantidade, setQuantidade } = useContext(CarrinhoContext);
+    const { totalCarrinho, setTotalCarrinho } = useContext(CarrinhoContext);
 
     function AdicionarAoCarrinho(item, quantidade) {
         const novoCarrinho = [...carrinho];
@@ -20,11 +21,16 @@ export const useCarrinhoContext = () => {
     function removerDoCarrinho(produto) {
         const index = carrinho.findIndex(item => item.id === produto.id);
         if (index !== -1) {
-        const novoCarrinho = [...carrinho];
-        novoCarrinho.splice(index, 1);
-        setCarrinho(novoCarrinho);
+            const novoCarrinho = [...carrinho];
+            novoCarrinho.splice(index, 1);
+            setCarrinho(novoCarrinho);
         }
     }
+
+    useEffect(() => {
+        const novoTotalCarrinho = carrinho.reduce((acumulador, item) => acumulador + (item.preco * item.quantidade), 0);
+        setTotalCarrinho(novoTotalCarrinho);
+    }, [carrinho]);
 
     const handleChange = () => {
         return null;
@@ -37,6 +43,7 @@ export const useCarrinhoContext = () => {
         setQuantidade,
         AdicionarAoCarrinho,
         removerDoCarrinho,
+        totalCarrinho,
         handleChange
     };
 };
