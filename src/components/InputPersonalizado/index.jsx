@@ -1,6 +1,6 @@
 import styled from "./InputPadrao.module.css";
 
-const InputPersonalizado = ({ titulo,	type,	id,	size,	maxlength,	placeholder, required, readOnly }) => {
+const InputPersonalizado = ({ titulo,	type,	id,	size, maxlength, placeholder, required, readOnly, onBlur }) => {		
 	return (
 		<div className={styled.dados}>
 			<label htmlFor={id}>{titulo}</label>
@@ -12,6 +12,7 @@ const InputPersonalizado = ({ titulo,	type,	id,	size,	maxlength,	placeholder, re
 				placeholder={placeholder}
 				required={required}
 				readOnly={readOnly}
+				onBlur={onBlur}
 			/>
 		</div>
 	);

@@ -2,6 +2,21 @@ import styled from "./Cadastro.module.css";
 import InputPersonalizado from "../../components/InputPersonalizado";
 
 const Cadastro = () => {
+    
+    async function buscaCEP(cep) {
+        try {
+            const consultaCEP = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+            const consultaCepConvertido = await consultaCEP.json();
+    
+            document.querySelector('#logradouro').value = consultaCepConvertido.logradouro;
+            document.querySelector('#uf').value = consultaCepConvertido.uf;
+            document.querySelector('#localidade').value = consultaCepConvertido.localidade;
+            document.querySelector('#bairro').value = consultaCepConvertido.bairro;
+        } catch(e) {
+            console.log(e.message)
+        }
+    }
+    
     return (
         <form action="" className={styled.formulario}>
             <h1 className={styled.titulo_formulario}>Cadastre-se</h1>
@@ -62,7 +77,7 @@ const Cadastro = () => {
                         type="text"
                         id="cpf"
                         size="40"
-                        maxLength="40"
+                        maxLength="14"
                         placeholder="___.___.___-__"
                         required={true}
                     />
@@ -94,7 +109,7 @@ const Cadastro = () => {
                         type="text"
                         id="celular"
                         size="40"
-                        maxLength="40"
+                        maxLength="9"
                         placeholder="____-____"
                         required={true}
                     />
@@ -105,7 +120,7 @@ const Cadastro = () => {
                         type="text"
                         id="whatsapp"
                         size="40"
-                        maxLength="40"
+                        maxLength="14"
                         placeholder="(__)_____-____"
                         required={true}
                     />
@@ -122,6 +137,8 @@ const Cadastro = () => {
                         maxLength="40"
                         placeholder="_____-___"
                         required={true}
+
+                        onBlur={(e) => buscaCEP(e.target.value)}
                     />
                 </div>
                 <div className={styled.dados}>
@@ -143,7 +160,6 @@ const Cadastro = () => {
                         size="20"
                         maxLength="20"
                         required={true}
-                        readOnly={true}
                     />
                 </div>
             </div>
