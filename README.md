@@ -1,33 +1,40 @@
-# :tooth: E-commerce ZN Dental
+# Título do projeto
 
-# :computer: Sobre o projeto
+Projeto pessoal feito em HTML, CSS e React onde testo meus recentes conhecimentos em consumir dados em uma API, métodos de arrays - (map, reduce e filter) e Context API.
 
-https://pedroinaciop.github.io/projeto-site_zndental/ 
+## 🚀 Começando
 
-O ZN Dental é um projeto pessoal feito em HTML, CSS e TypeScript onde testo meus recentes conhecimentos em como consumir dados com uma API, exemplo ViaCEP, projeto em construção.
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-## ⚙️ Principais Funcionalidades
+Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
 
-Adicionar produtos ao carrinho, <br>
-Calcular valor total dos produtos no carrinho, <br>
-Trazer endereço no usuário conforme CEP.
+### 📋 Pré-requisitos
 
-# 🎨 Layout
+De que coisas você precisa para instalar o software e como instalá-lo?
 
-## Web 1
-![Web 1](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-1.png)
+```
+node.js
+```
 
-## Web 2
-![Web 2](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-2.png)
+### 🔧 Instalação
 
-## Web 3 
-![Web 3](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-3.png)
+Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
 
-## Tecnologias utilizadas
-[![Minhas Habilidades](https://skillicons.dev/icons?i=html,css,react)](https://skillicons.dev)
+Diga como essa etapa será:
 
-## 👨‍💻 Autor
+```
+npm install
+```
 
-Pedro Inácio Penha dos Santos
+## 🛠️ Construído com
 
-https://www.linkedin.com/in/pedroinaciop/
+Mencione as ferramentas que você usou para criar seu projeto
+
+* React - A biblioteca usada
+* [Maven](https://maven.apache.org/) - Gerente de Dependência
+* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+
+## ✒️ Autores
+
+* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/pedroinaciop)
+
