@@ -128,5 +128,18 @@
     "imagem": "https://pedroinaciop.github.io/zndental/images/hydrogum-5.jpg",
     "alt": "Imagem Alginato Hydrogum 5 Tipo I - Zhermack",
     "categoria": "Alginato"
+  },
+  {
+    "id": 11,
+    "nome_produto": "Compressa de Gaze 9 Fios - 500 Unidades",
+    "marca": "Karina",
+    "descricao": "Embalagem com 270g",
+    "quantidade_embalagem": "Embalagem com 270g.",
+    "preco_anterior": 29.99,
+    "preco": 25.99,
+    "codigo": "A0011",
+    "imagem": "https://pedroinaciop.github.io/zndental/images/gaze-karina.webp",
+    "alt": "Compressa de Gaze 9 Fios 500 Unidades - Karina",
+    "categoria": "Descartáveis"
   }
 ]

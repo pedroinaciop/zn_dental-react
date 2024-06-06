@@ -20,7 +20,7 @@ const Produtos = () => {
                         </div>
                         <div className={styled.nicho__informacoes}>
                             <p className={styled.nome_produto}>
-                                <NavLink to={`produto/${material.id}`}>
+                                <NavLink className={styled.link_produto} to={`produto/${material.id}`}>
                                     {material.nome_produto} - {material.marca}
                                 </NavLink>
                             </p>

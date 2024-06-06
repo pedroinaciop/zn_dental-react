@@ -1,5 +1,6 @@
 .container_principal {
 	display: flex;
+	justify-content: center;
 }
 
 .container_carrinho {
@@ -79,7 +80,7 @@
 	width: 18.75rem;
 	border-radius: .6rem;
 	padding: 1.8rem;
-	margin: 1.8rem;
+	margin: 1.8rem; 
 
 	color: var(--cor0);
 	background-color: var(--cor4);

@@ -5,6 +5,10 @@
 	height: 100vh;
 }
 
+.rodape__logo {
+	width: 150px;
+}
+
 .rodape__informacoes {
 	display: grid;
 	grid-template-columns: .10fr .20fr .20fr .20fr .20fr;

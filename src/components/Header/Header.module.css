@@ -68,18 +68,6 @@
     padding: .6rem;
 }
 
-.caret {
-    color: var(--cor1);
-}
-
-.login:hover .caret {
-    animation: novaAnimacao 1s;
-}
-
-.login:active .caret {
-    color: var(--cor2);
-}
-
 .carrinho {
     display: flex;
     align-items: center;
@@ -122,20 +110,21 @@
     display: flex;
     justify-content: center;
     gap: 2.5rem;
-    
-    padding: .6rem;
+
     list-style-type: none;
 }
 
 .lista_tipo {
-    font-size: .9em;
+    font-size: .9rem;
 }
 
 .lista_tipo_link {
     color: var(--cor-fonte);
+    padding: 0.6rem;
 }
 
 .lista_tipo_link:hover {
     color: var(--cor1);
-    border-bottom: 1px solid var(--cor1);
+    font-weight: bold;
+    cursor: pointer;
 }

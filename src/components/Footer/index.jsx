@@ -15,7 +15,7 @@ const Footer = () => {
 	return (
 		<footer className={styled.rodape}>
 			<div className={styled.rodape__informacoes}>
-				<img src={logo} alt="" className={styled.cabecalho__logo} />
+				<img src={logo} alt="" className={styled.rodape__logo} />
 				<ul className={styled.rodape__container}>
 					<li className={styled.rodape__container__titulo}>Ajuda</li>
 					<li className={styled.rodape__container_item}>Assistente Virtual</li>

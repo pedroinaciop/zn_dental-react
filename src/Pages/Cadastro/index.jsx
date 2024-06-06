@@ -12,8 +12,8 @@ const Cadastro = () => {
             document.querySelector('#uf').value = consultaCepConvertido.uf;
             document.querySelector('#localidade').value = consultaCepConvertido.localidade;
             document.querySelector('#bairro').value = consultaCepConvertido.bairro;
-        } catch(e) {
-            console.log(e.message)
+        } catch(error) {
+            console.error('Erro ao buscar CEP, verifique o código-fonte:', error);
         }
     }
     
@@ -134,7 +134,7 @@ const Cadastro = () => {
                         type="text"
                         id="cep"
                         size="5"
-                        maxLength="40"
+                        maxLength="8"
                         placeholder="_____-___"
                         required={true}
 

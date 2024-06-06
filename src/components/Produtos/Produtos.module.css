@@ -71,7 +71,7 @@ a {
     color: var(--cor0);
 }
 
-a:hover {
+.link_produto:hover {
     color: var(--cor1);
     text-decoration: underline;
 }
