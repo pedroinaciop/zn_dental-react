@@ -8,7 +8,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### 📋 Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+Quais tecnologicas preciso para instalar o software e como instalá-lo?
 
 ```
 node.js
@@ -16,9 +16,9 @@ node.js
 
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+Exemplo passo-a-passo que informando o que você deve executar para ter um ambiente de desenvolvimento em execução.
 
-Diga como essa etapa será:
+Após instalar o software em sua máquina local, digitar o comando a seguir no console do projeto
 
 ```
 npm install
@@ -30,7 +30,12 @@ Mencione as ferramentas que você usou para criar seu projeto
 
 * [React](https://react.dev/) - A biblioteca usada
 
+## 🔗 Link do site
+
+Acesso ao site do projeto na web
+
+* [ZN Dental | Produtos Odon- link](https://zn-dental-react.vercel.app/) - A biblioteca usada
+
 ## ✒️ Autores
 
 * **Desenvolvedor** - [Pedro Inácio P.](https://github.com/pedroinaciop)
-
