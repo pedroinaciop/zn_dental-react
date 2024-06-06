@@ -34,7 +34,7 @@ Mencione as ferramentas que você usou para criar seu projeto
 
 Acesso ao site do projeto na web
 
-* [ZN Dental | Produtos Odon- link](https://zn-dental-react.vercel.app/) - A biblioteca usada
+* [ZN Dental | Produtos Odontológicos - link](https://zn-dental-react.vercel.app/) - A biblioteca usada
 
 ## ✒️ Autores
 
