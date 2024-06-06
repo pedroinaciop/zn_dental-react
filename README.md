@@ -1,4 +1,4 @@
-# Título do projeto
+#   ZN Dental | Produtos Odontológicos LTDA
 
 Projeto pessoal feito em HTML, CSS e React onde testo meus recentes conhecimentos em consumir dados em uma API, métodos de arrays - (map, reduce e filter) e Context API.
 
