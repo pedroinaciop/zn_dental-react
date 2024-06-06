@@ -32,5 +32,5 @@ Mencione as ferramentas que você usou para criar seu projeto
 
 ## ✒️ Autores
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/pedroinaciop)
+* **Desenvolvedor** - [Pedro Inácio P.](https://github.com/pedroinaciop)
 
