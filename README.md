@@ -28,9 +28,7 @@ npm install
 
 Mencione as ferramentas que você usou para criar seu projeto
 
-* React - A biblioteca usada
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+* [React](https://react.dev/) - A biblioteca usada
 
 ## ✒️ Autores
 
