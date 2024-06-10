@@ -10,23 +10,20 @@ import { useContext } from "react";
 const Header = () => {
     const { carrinho } = useContext(CarrinhoContext);
 
-    const isResina = location.pathname === "/Resinas";
-    console.log(isResina)
-
     return (
         <header>      
             <nav className={styled.navegacao}>
                 <ul className={styled.navegacao_lista}>
-                    <NavLink to={"/Resinas"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>
+                    <NavLink to={"/Resinas"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
                         <li className={styled.lista_tipo} ><p className={styled.lista_tipo_link}>Resinas</p></li>
                     </NavLink>
-                    <NavLink to={"/Laboratório"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>
+                    <NavLink to={"/Laboratório"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
                         <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Laboratório</p></li>
                     </NavLink>
-                    <NavLink to={"/Equipamentos"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>
+                    <NavLink to={"/Equipamentos"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
                         <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Equipamentos</p></li>
                     </NavLink>
-                    <NavLink to={"Descartáveis"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>
+                    <NavLink to={"Descartáveis"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
                         <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Descartáveis</p></li>
                     </NavLink>
                 </ul>
@@ -38,7 +35,7 @@ const Header = () => {
                 </NavLink>
 
             <div className={styled.elementos_cabecalho}>
-                    <img src={lupa} className={styled.img_pesquisa}></img>
+                    <img src={lupa} alt="Ícone de lupa" className={styled.img_pesquisa}/>
                     <input type="text" placeholder="Digite o que você procura" id="pesquisar" name="pesquisar" className={styled.input_pesquisa}/>
             </div>
 

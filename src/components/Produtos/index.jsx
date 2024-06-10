@@ -1,6 +1,6 @@
+import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
 import styled from "./Produtos.module.css";
 import { NavLink } from "react-router-dom";
-import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
 
 const Produtos = ({ array }) => {
     const { AdicionarAoCarrinho } = useCarrinhoContext();
@@ -11,11 +11,7 @@ const Produtos = ({ array }) => {
                 return (
                     <div key={material.id} className={styled.container__nicho}>
                         <div className={styled.nicho__imagem}>
-                            <img
-                                className={styled.nicho__imagem__img}
-                                src={material.imagem}
-                                alt={material.alt}
-                            />
+                            <img className={styled.nicho__imagem__img} src={material.imagem} alt={material.alt} />
                         </div>
                         <div className={styled.nicho__informacoes}>
                             <p className={styled.nome_produto}>
@@ -43,8 +39,7 @@ const Produtos = ({ array }) => {
                             </p>
                         </div>
                         <button type="button" className={styled.comprar}
-                            onClick={() => AdicionarAoCarrinho(
-                                {
+                            onClick={() => AdicionarAoCarrinho({
                                     id: material.id,
                                     nome_produto: material.nome_produto,
                                     marca: material.marca,

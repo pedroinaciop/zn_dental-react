@@ -69,7 +69,7 @@ const Footer = () => {
 					<li className={styled.rodape__container__titulo}>Nossas Redes</li>
 					<div className={styled.rodape__container__redes}>
 						<li>
-							<a href="#">
+							<a href="www.instagram.com">
 								<img
 									src={instagram}
 									alt="Logo do Instagram"
@@ -77,7 +77,7 @@ const Footer = () => {
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="www.linkedin.com">
 								<img
 									src={linkedIn}
 									alt="Logo do LinkedIn"
@@ -85,13 +85,13 @@ const Footer = () => {
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="www.tiktok.com">
 								<img src={tiktok} 
 								alt="Logo do TikTok" />
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="www.twitter.com">
 								<img
 									src={twitter}
 									alt="Logo do Twitter"

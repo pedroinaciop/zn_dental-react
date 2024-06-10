@@ -3,7 +3,7 @@ import produtos from "../../json/produtos.json";
 import styled from "./Resinas.module.css";
 
 const Resinas = () => {
-	const resinas = produtos.filter(produto => (produto.categoria == "Resina"));
+	const resinas = produtos.filter(produto => (produto.categoria === "Resina"));
 	
 	return (
 		<main>
