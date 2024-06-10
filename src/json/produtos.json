@@ -141,5 +141,58 @@
     "imagem": "https://pedroinaciop.github.io/zndental/images/gaze-karina.webp",
     "alt": "Compressa de Gaze 9 Fios 500 Unidades - Karina",
     "categoria": "Descartáveis"
+  },
+  {
+  "id": 12,
+  "nome_produto": "Luva de Procedimento de Látex com Pó",
+  "marca": "Supermax",
+  "descricao": "Embalagem com 100 unidades. Escolha o tamanho.",
+  "quantidade_embalagem": "Embalagem com 100 unidades.",
+  "preco_anterior": 42.99,
+  "preco": 37.99,
+  "codigo": "A0012",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/luva-supermax.webp",
+  "alt": "Luva de Procedimento de Látex com Pó - Supermax",
+  "categoria": "Descartáveis"
+  },
+  {
+  "id": 13,
+  "nome_produto": "Propé Descartável 20G",
+  "marca": "Fava",
+  "descricao": "Embalagem com 100 unidades. 20g.",
+  "quantidade_embalagem": "Embalagem com 100 unidades.",
+  "preco_anterior": 34.90,
+  "preco": 29.99,
+  "codigo": "A0013",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/prope.png",
+  "alt": "Propé Descartável 20G - Fava",
+  "categoria": "Descartáveis"
+  }
+  ,
+  {
+  "id": 14,
+  "nome_produto": "Sugador Odontológico Descartável",
+  "marca": "SSPlus",
+  "descricao": "Embalagem com 40 unidades. Colorido.",
+  "quantidade_embalagem": "Embalagem com 40 unidades.",
+  "preco_anterior": 10.90,
+  "preco": 8.99,
+  "codigo": "A0014",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/sugador-ssplus.webp",
+  "alt": "Sugador Odontológico Descartável - SSPlus",
+  "categoria": "Descartáveis"
+  },
+  {
+  "id": 15,
+  "nome_produto": "Sugador Odontológico Descartável",
+  "marca": "SSPlus",
+  "descricao": "Embalagem com 50 unidades. 12G.",
+  "quantidade_embalagem": "Embalagem com 50 unidades. 12G.",
+  "preco_anterior": 29.90,
+  "preco": 24.90,
+  "codigo": "A0015",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/touca.png",
+  "alt": "Sugador Odontológico Descartável - SSPlus",
+  "categoria": "Descartáveis"
   }
 ]

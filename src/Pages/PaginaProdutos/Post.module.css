@@ -95,3 +95,17 @@
 .btn_adicionarCarrinho:hover {
     background-color: var(--cor1);
 }
+
+.informacao_economia {
+    background-color: var(--cor4);
+    color: var(--cor1);
+    
+    width: 220px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+    border: 2px solid var(--cor1);
+    text-align: center;
+    padding: 10px 0px;
+}

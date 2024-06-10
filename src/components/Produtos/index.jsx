@@ -1,14 +1,13 @@
-import materiais from "../../json/produtos.json";
 import styled from "./Produtos.module.css";
 import { NavLink } from "react-router-dom";
 import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
 
-const Produtos = () => {
+const Produtos = ({ array }) => {
     const { AdicionarAoCarrinho } = useCarrinhoContext();
 
     return (
         <section className={styled.container}>
-            {materiais.map((material) => {
+            {array.map((material) => {
                 return (
                     <div key={material.id} className={styled.container__nicho}>
                         <div className={styled.nicho__imagem}>

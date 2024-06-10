@@ -4,7 +4,7 @@ import materiais from "../../json/produtos.json";
 import { useParams } from "react-router-dom";
 import styled from "./Post.module.css";
 
-const Post = () => {
+const PaginaProdutos = () => {
     const parametros = useParams();
     const { AdicionarAoCarrinho } = useCarrinhoContext();
 
@@ -16,14 +16,12 @@ const Post = () => {
         return <NaoEncontrada />;
     }
 
+    const valor_economizado = material.preco_anterior - material.preco;
+
     return (
         <main className={styled.container_material}>
             <figure className={styled.left_container}>
-                <img
-                    className={styled.img_material}
-                    src={material.imagem}
-                    alt={material.alt}
-                />
+                <img className={styled.img_material} src={material.imagem} alt={material.alt} />
             </figure>
 
             <section className={styled.right_container}>
@@ -54,26 +52,25 @@ const Post = () => {
                             value="1"
                             className={styled.quantidade_material}
                         />
-                        <button
-                            className={styled.btn_adicionarCarrinho}
-                            type="button"
+                        <button className={styled.btn_adicionarCarrinho} type="button"
                             onClick={() =>
-                                AdicionarAoCarrinho(
-                                    {
-                                        id: material.id,
-                                        nome_produto: material.nome_produto,
-                                        marca: material.marca,
-                                        preco: material.preco,
-                                        codigo: material.codigo,
-                                        imagem: material.imagem,
-                                        alt: material.alt,
-                                    },
-                                    1,
-                                )
-                            }
-                        >
+                            AdicionarAoCarrinho(
+                                {
+                                    id: material.id,
+                                    nome_produto: material.nome_produto,
+                                    marca: material.marca,
+                                    preco: material.preco,
+                                    codigo: material.codigo,
+                                    imagem: material.imagem,
+                                    alt: material.alt,
+                                }, 1)}>
                             <span>Adicionar ao Carrinho</span>
                         </button>
+                        <div className={styled.informacao_economia}>
+                            <p>
+                                Economize agora R$ {valor_economizado.toFixed(2)}
+                            </p>
+                        </div>
                     </div>
                 </section>
             </section>
@@ -81,4 +78,4 @@ const Post = () => {
     );
 };
 
-export default Post;
+export default PaginaProdutos;

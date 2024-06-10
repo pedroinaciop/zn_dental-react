@@ -1,23 +1,34 @@
 import iconCarrinho from "../../../src/assets/images/icons/icon-carrinho.png";
-import { CarrinhoContext } from "../../context/CarrinhoContext";
 import iconCadastro from "../../assets/images/icons/icon-login.png";
+import { CarrinhoContext } from "../../context/CarrinhoContext";
+import lupa from "../../assets/images/icons/procurar.png";
 import logo from "../../assets/images/logo-zn.png";
 import { NavLink } from 'react-router-dom';
 import styled from './Header.module.css';
 import { useContext } from "react";
-import lupa from "../../assets/images/icons/procurar.png";
 
 const Header = () => {
     const { carrinho } = useContext(CarrinhoContext);
+
+    const isResina = location.pathname === "/Resinas";
+    console.log(isResina)
 
     return (
         <header>      
             <nav className={styled.navegacao}>
                 <ul className={styled.navegacao_lista}>
-                    <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Dentistas</p></li>
-                    <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Estudantes</p></li>
-                    <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Laboratório</p></li>
-                    <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Equipamentos</p></li>
+                    <NavLink to={"/Resinas"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>
+                        <li className={styled.lista_tipo} ><p className={styled.lista_tipo_link}>Resinas</p></li>
+                    </NavLink>
+                    <NavLink to={"/Laboratório"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>
+                        <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Laboratório</p></li>
+                    </NavLink>
+                    <NavLink to={"/Equipamentos"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>
+                        <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Equipamentos</p></li>
+                    </NavLink>
+                    <NavLink to={"Descartáveis"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>
+                        <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Descartáveis</p></li>
+                    </NavLink>
                 </ul>
             </nav>
 
