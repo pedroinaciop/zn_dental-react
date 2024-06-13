@@ -214,6 +214,9 @@ const Cadastro = () => {
             <button type="submit" className={styled.cadastrar}>
                 CADASTRAR
             </button>
+            <button type="reset" className={styled.cadastrar}>
+                LIMPAR
+            </button>
         </form>
     );
 };

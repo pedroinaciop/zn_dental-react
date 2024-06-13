@@ -4,6 +4,7 @@
 }
 
 .container_carrinho {
+	color: var(--cor-fonte);
 	display: flex;
 	flex-direction: row;
 	align-items: center;

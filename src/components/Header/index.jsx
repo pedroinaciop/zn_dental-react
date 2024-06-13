@@ -17,13 +17,13 @@ const Header = () => {
                     <NavLink to={"/Resinas"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
                         <li className={styled.lista_tipo} ><p className={styled.lista_tipo_link}>Resinas</p></li>
                     </NavLink>
-                    <NavLink to={"/Laboratório"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
+                    <NavLink to={"/Laboratorio"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
                         <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Laboratório</p></li>
                     </NavLink>
                     <NavLink to={"/Equipamentos"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
                         <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Equipamentos</p></li>
                     </NavLink>
-                    <NavLink to={"Descartáveis"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
+                    <NavLink to={"Descartaveis"} style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal', color: isActive ? '#363889' : '#667381'})}>
                         <li className={styled.lista_tipo}><p className={styled.lista_tipo_link}>Descartáveis</p></li>
                     </NavLink>
                 </ul>

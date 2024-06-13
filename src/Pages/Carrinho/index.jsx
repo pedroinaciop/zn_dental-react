@@ -21,7 +21,7 @@ const Carrinho = () => {
                             <section key={produto.id} className={styled.container_carrinho}>
                                 <img src={produto.imagem} alt="" className={styled.produto_imagem_carrinho} />
                                 <div className={styled.produto_informacoes}>
-                                    <h3 className={styled.produto_nome_carrinho}>{produto.nome_produto} - {produto.marca}</h3>
+                                    <h3 className={styled.produto_nome_carrinho}>{produto.nome_produto} - {produto.marca} - {produto.opcoes}</h3>
                                     <p className={styled.produto_codigo_carrinho}>(Cód. {produto.codigo})</p>
                                 </div>
                                 <div className={styled.container_preco}>

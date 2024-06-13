@@ -10,7 +10,9 @@
     "codigo": "A0001",
     "imagem": "https://pedroinaciop.github.io/zndental/images/charisma_diamond.png",
     "alt": "Imagem Resina Charisma Diamond - Kulzer",
-    "categoria": "Resina"
+    "categoria": "Resinas",
+
+    "opcoes": ["A1", "A2", "A3"]
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
     "codigo": "A0002",
     "imagem": "https://pedroinaciop.github.io/zndental/images/forma-ultradent.png",
     "alt": "Imagem Forma - Ultradent",
-    "categoria": "Resina"
+    "categoria": "Resinas",
+
+    "opcoes": ["A1", "A2", "A3"]
   },
   {
     "id": 3,
@@ -36,7 +40,9 @@
     "codigo": "A0003",
     "imagem": "https://pedroinaciop.github.io/zndental/images/resina-omega.png",
     "alt": "Imagem Estelite Omega - Tokuyama",
-    "categoria": "Resina"
+    "categoria": "Resinas",
+
+    "opcoes": ["A1", "A2", "A3"]
   },
   {
     "id": 4,
@@ -49,7 +55,9 @@
     "codigo": "A0004",
     "imagem": "https://pedroinaciop.github.io/zndental/images/resina-palfique.png",
     "alt": "Imagem Resina Palfique Mini Lx5 - Tokuyama",
-    "categoria": "Resina"
+    "categoria": "Resinas",
+
+    "opcoes": ["A1", "A2", "A3"]
   },
   {
     "id": 5,
@@ -62,7 +70,9 @@
     "codigo": "A0005",
     "imagem": "https://pedroinaciop.github.io/zndental/images/resina-opallis-fgm.png",
     "alt": "Imagem Resina Opallis - FGM",
-    "categoria": "Resina"
+    "categoria": "Resinas",
+
+    "opcoes": ["A1", "A2", "A3"]
   },
   {
     "id": 6,
@@ -75,7 +85,7 @@
     "codigo": "A0006",
     "imagem": "https://pedroinaciop.github.io/zndental/images/jeltrate-plus.jpg",
     "alt": "Imagem Alginato Tipo I Jeltrate Plus - Dentsply Sirona",
-    "categoria": "Alginato"
+    "categoria": "Laboratorio"
   },
   {
     "id": 7,
@@ -88,7 +98,7 @@
     "codigo": "A0007",
     "imagem": "https://pedroinaciop.github.io/zndental/images/jeltrate-dustless.png",
     "alt": "Imagem Alginato Tipo II Jeltrate Dustless - Dentsply Sirona",
-    "categoria": "Alginato"
+    "categoria": "Laboratorio"
   },
   {
     "id": 8,
@@ -101,7 +111,7 @@
     "codigo": "A0008",
     "imagem": "https://pedroinaciop.github.io/zndental/images/avagel.jpg",
     "alt": "Imagem Alginato Tipo II Jeltrate Dustless - Dentsply Sirona",
-    "categoria": "Alginato"
+    "categoria": "Laboratorio"
   },
   {
     "id": 9,
@@ -114,7 +124,7 @@
     "codigo": "A0009",
     "imagem": "https://pedroinaciop.github.io/zndental/images/ezact-kromm.jpg",
     "alt": "Imagem Alginato Ezact Kromm - Vigodent",
-    "categoria": "Alginato"
+    "categoria": "Laboratorio"
   },
   {
     "id": 10,
@@ -127,7 +137,7 @@
     "codigo": "A0010",
     "imagem": "https://pedroinaciop.github.io/zndental/images/hydrogum-5.jpg",
     "alt": "Imagem Alginato Hydrogum 5 Tipo I - Zhermack",
-    "categoria": "Alginato"
+    "categoria": "Laboratorio"
   },
   {
     "id": 11,
@@ -140,7 +150,7 @@
     "codigo": "A0011",
     "imagem": "https://pedroinaciop.github.io/zndental/images/gaze-karina.webp",
     "alt": "Compressa de Gaze 9 Fios 500 Unidades - Karina",
-    "categoria": "Descartáveis"
+    "categoria": "Descartaveis"
   },
   {
   "id": 12,
@@ -153,7 +163,9 @@
   "codigo": "A0012",
   "imagem": "https://pedroinaciop.github.io/zndental/images/luva-supermax.webp",
   "alt": "Luva de Procedimento de Látex com Pó - Supermax",
-  "categoria": "Descartáveis"
+  "categoria": "Descartaveis",
+
+  "opcoes": ["PP", "P", "M", "G"]
   },
   {
   "id": 13,
@@ -166,9 +178,8 @@
   "codigo": "A0013",
   "imagem": "https://pedroinaciop.github.io/zndental/images/prope.png",
   "alt": "Propé Descartável 20G - Fava",
-  "categoria": "Descartáveis"
-  }
-  ,
+  "categoria": "Descartaveis"
+  },
   {
   "id": 14,
   "nome_produto": "Sugador Odontológico Descartável",
@@ -180,7 +191,7 @@
   "codigo": "A0014",
   "imagem": "https://pedroinaciop.github.io/zndental/images/sugador-ssplus.webp",
   "alt": "Sugador Odontológico Descartável - SSPlus",
-  "categoria": "Descartáveis"
+  "categoria": "Descartaveis"
   },
   {
   "id": 15,
@@ -193,6 +204,71 @@
   "codigo": "A0015",
   "imagem": "https://pedroinaciop.github.io/zndental/images/touca.png",
   "alt": "Sugador Odontológico Descartável - SSPlus",
-  "categoria": "Descartáveis"
+  "categoria": "Descartaveis"
+  },
+  {
+  "id": 16,
+  "nome_produto": "Autoclave Vitale Class 12L",
+  "marca": "Cristófoli",
+  "descricao": "Embalagem com 1 autoclave",
+  "quantidade_embalagem": "Embalagem com 1 autoclave, 2 bandejas, 1 suporte para bandejas, 1 copo dosador, 1 braçadeira, 1,5 m de mangueira e 1 manual de instruções",
+  "preco_anterior": 4999.99,
+  "preco": 4841.90,
+  "codigo": "A0016",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/autoclave-12l.jpg",
+  "alt": "Autoclave Vitale Class 12L - Cristófoli",
+  "categoria": "Equipamentos"
+  },
+  {
+  "id": 17,
+  "nome_produto": "Autoclave Vitale Class 21L",
+  "marca": "Cristófoli",
+  "descricao": "Embalagem com 1 autoclave",
+  "quantidade_embalagem": "Embalagem com 1 autoclave, 3 bandejas, 1 suporte para bandejas, 1 copo dosador, 1 braçadeira, 1,5 m de mangueira e 1 manual de instruções.",
+  "preco_anterior": 4999.99,
+  "preco": 6344.90,
+  "codigo": "A0017",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/autoclave-21l.jpg",
+  "alt": "Autoclave Vitale Class 21L - Cristófoli",
+  "categoria": "Equipamentos"
+  },
+  {
+  "id": 18,
+  "nome_produto": "Seladora",
+  "marca": "Cristófoli",
+  "descricao": "Embalagem com 1 seladora",
+  "quantidade_embalagem": "Embalagem com 1 seladora",
+  "preco_anterior": 999.90,
+  "preco": 989.90,
+  "codigo": "A0018",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/seladora.jpg",
+  "alt": "Seladora - Cristófoli",
+  "categoria": "Equipamentos"
+  },
+  {
+  "id": 19,
+  "nome_produto": "Cuba Ultrassônica",
+  "marca": "Cristófoli",
+  "descricao": "Embalagem com 1 cuba ultrassônica",
+  "quantidade_embalagem": "Embalagem com 1 cuba ultrassônica",
+  "preco_anterior": 1199.90,
+  "preco": 1099.90,
+  "codigo": "A0019",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/cuba-ultrassonica.jpg",
+  "alt": "Cuba Ultrassônica - Cristófoli",
+  "categoria": "Equipamentos"
+  },
+  {
+  "id": 20,
+  "nome_produto": "Destilador de Água",
+  "marca": "Cristófoli",
+  "descricao": "Embalagem com 1 destiladora de água",
+  "quantidade_embalagem": "Embalagem com 1 destiladora de água",
+  "preco_anterior": 1129.90,
+  "preco": 1067.90,
+  "codigo": "A0020",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/destilador-agua.jpg",
+  "alt": "Destilador de Água - Cristófoli",
+  "categoria": "Equipamentos"
   }
 ]

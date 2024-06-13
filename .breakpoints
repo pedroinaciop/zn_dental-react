@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "src/Pages/ProdutosCategorias/index.jsx": [
+      {
+        "id": "e77f33a9-dc8a-4104-aa74-fbf35f7d1db1",
+        "line": 5,
+        "version": 379,
+        "index": 179
+      }
+    ]
+  }
 }

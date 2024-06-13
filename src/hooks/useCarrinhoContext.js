@@ -9,7 +9,7 @@ export const useCarrinhoContext = () => {
 
     function AdicionarAoCarrinho(item, quantidade) {        
         const novoCarrinho = [...carrinho];
-        const existindoIdProduto = novoCarrinho.findIndex( (i) => i.id === item.id,);
+        const existindoIdProduto = novoCarrinho.findIndex((i) => i.id === item.id);
 
         if (existindoIdProduto === -1) {
             setCarrinho([...novoCarrinho, { ...item, quantidade }]);

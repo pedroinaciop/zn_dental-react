@@ -3,10 +3,14 @@ import NaoEncontrada from "../../Pages/NaoEncontrada";
 import materiais from "../../json/produtos.json";
 import { useParams } from "react-router-dom";
 import styled from "./Post.module.css";
+import { useState } from "react";
 
 const PaginaProdutos = () => {
-    const parametros = useParams();
+    const [ opcaoSelecionada, setOpcaoSelecionada ] = useState('');
+    const [ quantidade, setQuantidade ] = useState(1);
     const { AdicionarAoCarrinho } = useCarrinhoContext();
+    
+    const parametros = useParams();
 
     const material = materiais.find((material) => {
         return material.id === Number(parametros.id);
@@ -15,6 +19,14 @@ const PaginaProdutos = () => {
     if (!material) {
         return <NaoEncontrada />;
     }
+
+    const identificadorChangeQuantidade = (event) => {
+        setQuantidade(event.target.value);
+    };
+    
+    const identificadorChangeOpcaoSelecionada = (event) => {
+        setOpcaoSelecionada(event.target.value);
+    };
 
     const valor_economizado = material.preco_anterior - material.preco;
 
@@ -29,11 +41,25 @@ const PaginaProdutos = () => {
                     {material.nome_produto} - {material.marca}
                 </h1>
                 <h3 className={styled.descricao_material}>
-                    {material.quantidade_embalagem}
+                    <p>{material.descricao}</p>
                 </h3>
                 <p className={styled.codReferencia_material}>
                     Cod. de Referência: {material.codigo}
                 </p>
+
+                <div className={styled.opcoes}>
+                    {material.opcoes && material.opcoes.length > 0 
+                    ? (<>
+                        <h3 className={styled.titulo_opcoes}>Escolha a cor<span className={styled.obrigatorio}>*</span></h3>
+                            <select value={opcaoSelecionada} onChange={identificadorChangeOpcaoSelecionada}>
+                                <option value="Escolha uma opção...">Escolha uma opção...</option>
+                                {material.opcoes.map((opcao) => (
+                                    <option key={opcao} value={opcao}>{opcao}</option>
+                                ))}
+                            </select>
+                       </>) 
+                        : (<span></span>)}
+                </div>
 
                 <section className={styled.container_precoQuantidade_material}>
                     <div className={styled.containerPreco_material}>
@@ -46,12 +72,7 @@ const PaginaProdutos = () => {
                     </div>
 
                     <div className={styled.containerQuantidade_material}>
-                        <input
-                            type="number"
-                            id=""
-                            value="1"
-                            className={styled.quantidade_material}
-                        />
+                        <input type="number" value={quantidade} onChange={identificadorChangeQuantidade} className={styled.quantidade_material} />
                         <button className={styled.btn_adicionarCarrinho} type="button"
                             onClick={() =>
                             AdicionarAoCarrinho(
@@ -62,6 +83,7 @@ const PaginaProdutos = () => {
                                     preco: material.preco,
                                     codigo: material.codigo,
                                     imagem: material.imagem,
+                                    opcoes: opcaoSelecionada,
                                     alt: material.alt,
                                 }, 1)}>
                             <span>Adicionar ao Carrinho</span>

@@ -72,6 +72,7 @@ select {
 }
 
 .cadastrar {
+	width: 115px;
 	border: 0;
 	border-radius: .6rem;
 	padding: .75rem;
