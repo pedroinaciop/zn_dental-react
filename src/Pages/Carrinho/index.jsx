@@ -4,7 +4,8 @@ import remover from "../../../src/assets/images/lata-de-lixo.png"
 import styled from './Carrinho.module.css';
 
 const Carrinho = () => {
-    const { carrinho, handleChange, removerDoCarrinho, totalCarrinho } = useCarrinhoContext();
+    const { carrinho, removerDoCarrinho, totalCarrinho, atualizarQuantidadeProduto } = useCarrinhoContext();
+
 
     return (
         <main className={styled.container_principal}>
@@ -25,7 +26,7 @@ const Carrinho = () => {
                                     <p className={styled.produto_codigo_carrinho}>(Cód. {produto.codigo})</p>
                                 </div>
                                 <div className={styled.container_preco}>
-                                    <input type="number" value={produto.quantidade} onChange={handleChange} min={0} max={999} className={styled.produto_quantidade} />
+                                    <input type="number" value={produto.quantidade} min={1} onChange={(e) => atualizarQuantidadeProduto(produto.id, Number(e.target.value))} className={styled.produto_quantidade} />
                                     <h3 className={styled.produto_valor_carrinho}>R$ {produto.preco}</h3>
                                 </div>
                                 <abbr title="Remover item do carrinho" className={styled.abreviacao}>

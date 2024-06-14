@@ -6,6 +6,7 @@ export const useCarrinhoContext = () => {
     const { carrinho, setCarrinho } = useContext(CarrinhoContext);
     const { quantidade, setQuantidade } = useContext(CarrinhoContext);
     const { totalCarrinho, setTotalCarrinho } = useContext(CarrinhoContext);
+    const { opcaoSelecionada, setOpcaoSelecionada } = useContext(CarrinhoContext);
 
     function AdicionarAoCarrinho(item, quantidade) {        
         const novoCarrinho = [...carrinho];
@@ -46,10 +47,27 @@ export const useCarrinhoContext = () => {
           });
     }
 
+
+    const atualizarQuantidadeProduto = (id, novaQuantidade) => {
+        setCarrinho((carrinhoAtual) =>
+            carrinhoAtual.map((produto) =>
+            produto.id === id ? { ...produto, quantidade: novaQuantidade } : produto
+            )
+        );
+    };
+
+    const identificadorChangeQuantidade = (event) => {
+        setQuantidade(event.target.value);
+    };
+    
+    const identificadorChangeOpcaoSelecionada = (event) => {
+        setOpcaoSelecionada(event.target.value);
+    };
+
     useEffect(() => {
         const novoTotalCarrinho = carrinho.reduce((acumulador, item) => acumulador + (item.preco * item.quantidade), 0);
         setTotalCarrinho(novoTotalCarrinho);
-    }, [carrinho, setTotalCarrinho]);
+    }, [carrinho, setTotalCarrinho, quantidade, setCarrinho]);
 
     const handleChange = () => {
         return null;
@@ -58,11 +76,18 @@ export const useCarrinhoContext = () => {
     return {
         carrinho, 
         setCarrinho,
-        quantidade,
-        setQuantidade,
+        totalCarrinho,
         AdicionarAoCarrinho,
         removerDoCarrinho,
-        totalCarrinho,
-        handleChange
+        atualizarQuantidadeProduto,
+        handleChange,
+
+        quantidade,
+        setQuantidade,
+        identificadorChangeQuantidade,
+
+        opcaoSelecionada,
+        setOpcaoSelecionada,
+        identificadorChangeOpcaoSelecionada
     };
 };

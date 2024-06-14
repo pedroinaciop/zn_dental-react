@@ -3,13 +3,10 @@ import NaoEncontrada from "../../Pages/NaoEncontrada";
 import materiais from "../../json/produtos.json";
 import { useParams } from "react-router-dom";
 import styled from "./Post.module.css";
-import { useState } from "react";
 
 const PaginaProdutos = () => {
-    const [ opcaoSelecionada, setOpcaoSelecionada ] = useState('');
-    const [ quantidade, setQuantidade ] = useState(1);
-    const { AdicionarAoCarrinho } = useCarrinhoContext();
-    
+    const { AdicionarAoCarrinho, opcaoSelecionada, identificadorChangeOpcaoSelecionada, quantidade, identificadorChangeQuantidade } = useCarrinhoContext();
+ 
     const parametros = useParams();
 
     const material = materiais.find((material) => {
@@ -19,14 +16,6 @@ const PaginaProdutos = () => {
     if (!material) {
         return <NaoEncontrada />;
     }
-
-    const identificadorChangeQuantidade = (event) => {
-        setQuantidade(event.target.value);
-    };
-    
-    const identificadorChangeOpcaoSelecionada = (event) => {
-        setOpcaoSelecionada(event.target.value);
-    };
 
     const valor_economizado = material.preco_anterior - material.preco;
 
@@ -52,7 +41,6 @@ const PaginaProdutos = () => {
                     ? (<>
                         <h3 className={styled.titulo_opcoes}>Escolha a cor<span className={styled.obrigatorio}>*</span></h3>
                             <select value={opcaoSelecionada} onChange={identificadorChangeOpcaoSelecionada}>
-                                <option value="Escolha uma opção...">Escolha uma opção...</option>
                                 {material.opcoes.map((opcao) => (
                                     <option key={opcao} value={opcao}>{opcao}</option>
                                 ))}
@@ -72,7 +60,7 @@ const PaginaProdutos = () => {
                     </div>
 
                     <div className={styled.containerQuantidade_material}>
-                        <input type="number" value={quantidade} onChange={identificadorChangeQuantidade} className={styled.quantidade_material} />
+                        <input type="number" value={quantidade} min={1} onChange={identificadorChangeQuantidade} className={styled.quantidade_material} />
                         <button className={styled.btn_adicionarCarrinho} type="button"
                             onClick={() =>
                             AdicionarAoCarrinho(
@@ -85,7 +73,7 @@ const PaginaProdutos = () => {
                                     imagem: material.imagem,
                                     opcoes: opcaoSelecionada,
                                     alt: material.alt,
-                                }, 1)}>
+                                }, quantidade)}>
                             <span>Adicionar ao Carrinho</span>
                         </button>
                         <div className={styled.informacao_economia}>
