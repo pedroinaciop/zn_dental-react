@@ -5,7 +5,7 @@ import styled from './Carrinho.module.css';
 
 const Carrinho = () => {
     const { carrinho, removerDoCarrinho, totalCarrinho, atualizarQuantidadeProduto } = useCarrinhoContext();
-
+    console.log(carrinho)
 
     return (
         <main className={styled.container_principal}>
@@ -27,7 +27,7 @@ const Carrinho = () => {
                                 </div>
                                 <div className={styled.container_preco}>
                                     <input type="number" value={produto.quantidade} min={1} onChange={(e) => atualizarQuantidadeProduto(produto.id, Number(e.target.value))} className={styled.produto_quantidade} />
-                                    <h3 className={styled.produto_valor_carrinho}>R$ {produto.preco}</h3>
+                                    <h3 className={styled.produto_valor_carrinho}>R$ {produto.preco.toFixed(2)}</h3>
                                 </div>
                                 <abbr title="Remover item do carrinho" className={styled.abreviacao}>
                                     <img src={remover} className={styled.btn_excluir_produto} alt="Ícone excluir item" onClick={() => removerDoCarrinho(produto)}></img>
@@ -36,7 +36,6 @@ const Carrinho = () => {
                         )
                     })}
             </section>
-
             <aside className={styled.container_calculo}>
                 <h3>Resumo da compra</h3>
                 <div className={styled.calculo}>

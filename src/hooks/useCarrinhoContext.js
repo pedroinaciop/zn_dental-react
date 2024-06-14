@@ -18,6 +18,8 @@ export const useCarrinhoContext = () => {
             novoCarrinho[existindoIdProduto].quantidade += quantidade;
             setCarrinho(novoCarrinho);
         }
+        setQuantidade(1);
+        setOpcaoSelecionada("Escolha uma cor");
     }
 
     function removerDoCarrinho(produto) {
@@ -67,11 +69,7 @@ export const useCarrinhoContext = () => {
     useEffect(() => {
         const novoTotalCarrinho = carrinho.reduce((acumulador, item) => acumulador + (item.preco * item.quantidade), 0);
         setTotalCarrinho(novoTotalCarrinho);
-    }, [carrinho, setTotalCarrinho, quantidade, setCarrinho]);
-
-    const handleChange = () => {
-        return null;
-    };
+    }, [carrinho, setTotalCarrinho, setCarrinho]);
     
     return {
         carrinho, 
@@ -80,7 +78,6 @@ export const useCarrinhoContext = () => {
         AdicionarAoCarrinho,
         removerDoCarrinho,
         atualizarQuantidadeProduto,
-        handleChange,
 
         quantidade,
         setQuantidade,

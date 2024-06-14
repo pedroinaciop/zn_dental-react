@@ -46,6 +46,7 @@ const Produtos = ({ array }) => {
                                     preco: material.preco,
                                     codigo: material.codigo,
                                     imagem: material.imagem,
+                                    opcoes: "",
                                     alt: material.alt,
                                 }, 1)}>
                             Adicionar

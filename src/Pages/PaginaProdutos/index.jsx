@@ -8,7 +8,6 @@ const PaginaProdutos = () => {
     const { AdicionarAoCarrinho, opcaoSelecionada, identificadorChangeOpcaoSelecionada, quantidade, identificadorChangeQuantidade } = useCarrinhoContext();
  
     const parametros = useParams();
-
     const material = materiais.find((material) => {
         return material.id === Number(parametros.id);
     });
@@ -18,7 +17,7 @@ const PaginaProdutos = () => {
     }
 
     const valor_economizado = material.preco_anterior - material.preco;
-
+    
     return (
         <main className={styled.container_material}>
             <figure className={styled.left_container}>
@@ -40,13 +39,14 @@ const PaginaProdutos = () => {
                     {material.opcoes && material.opcoes.length > 0 
                     ? (<>
                         <h3 className={styled.titulo_opcoes}>Escolha a cor<span className={styled.obrigatorio}>*</span></h3>
-                            <select value={opcaoSelecionada} onChange={identificadorChangeOpcaoSelecionada}>
+                            <select value={opcaoSelecionada} onChange={identificadorChangeOpcaoSelecionada} required>
+                                <option key="Escolha uma cor" value="Escolha uma cor" selected>Escolha uma cor</option>
                                 {material.opcoes.map((opcao) => (
                                     <option key={opcao} value={opcao}>{opcao}</option>
                                 ))}
                             </select>
                        </>) 
-                        : (<span></span>)}
+                     : (<span></span>)}
                 </div>
 
                 <section className={styled.container_precoQuantidade_material}>
@@ -62,9 +62,7 @@ const PaginaProdutos = () => {
                     <div className={styled.containerQuantidade_material}>
                         <input type="number" value={quantidade} min={1} onChange={identificadorChangeQuantidade} className={styled.quantidade_material} />
                         <button className={styled.btn_adicionarCarrinho} type="button"
-                            onClick={() =>
-                            AdicionarAoCarrinho(
-                                {
+                            onClick={() =>AdicionarAoCarrinho({
                                     id: material.id,
                                     nome_produto: material.nome_produto,
                                     marca: material.marca,
@@ -73,7 +71,7 @@ const PaginaProdutos = () => {
                                     imagem: material.imagem,
                                     opcoes: opcaoSelecionada,
                                     alt: material.alt,
-                                }, quantidade)}>
+                                }, Number(quantidade))}>
                             <span>Adicionar ao Carrinho</span>
                         </button>
                         <div className={styled.informacao_economia}>
