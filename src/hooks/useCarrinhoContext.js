@@ -8,7 +8,7 @@ export const useCarrinhoContext = () => {
     const { totalCarrinho, setTotalCarrinho } = useContext(CarrinhoContext);
     const { opcaoSelecionada, setOpcaoSelecionada } = useContext(CarrinhoContext);
 
-    function AdicionarAoCarrinho(item, quantidade) {        
+    function AdicionarAoCarrinho(item, quantidade) {
         const novoCarrinho = [...carrinho];
         const existindoIdProduto = novoCarrinho.findIndex((i) => i.id === item.id);
 
@@ -49,7 +49,6 @@ export const useCarrinhoContext = () => {
           });
     }
 
-
     const atualizarQuantidadeProduto = (id, novaQuantidade) => {
         setCarrinho((carrinhoAtual) =>
             carrinhoAtual.map((produto) =>
@@ -66,6 +65,27 @@ export const useCarrinhoContext = () => {
         setOpcaoSelecionada(event.target.value);
     };
 
+    const removerTodosOsProdutos = (array) => {
+        Swal.fire({
+            title: "Você tem certeza?",
+            text: "Todos os produtos serão removidos",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "var(--cor2)",
+            cancelButtonColor: "var(--cor6)",
+            confirmButtonText: "Sim, deletar!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                setCarrinho([]);
+                Swal.fire({
+                    title: "Itens removidos!",
+                    text: "Todos os produtos foram removidos",
+                    icon: "success"
+                });
+            }
+          });
+    }
+
     useEffect(() => {
         const novoTotalCarrinho = carrinho.reduce((acumulador, item) => acumulador + (item.preco * item.quantidade), 0);
         setTotalCarrinho(novoTotalCarrinho);
@@ -77,6 +97,7 @@ export const useCarrinhoContext = () => {
         totalCarrinho,
         AdicionarAoCarrinho,
         removerDoCarrinho,
+        removerTodosOsProdutos,
         atualizarQuantidadeProduto,
 
         quantidade,

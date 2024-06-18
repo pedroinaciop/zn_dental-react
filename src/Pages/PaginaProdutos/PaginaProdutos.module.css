@@ -1,14 +1,18 @@
-.container_material {
+.container {
     color: var(--cor-fonte);
     background-color: #FFFFFF;
     box-shadow: 1px 1px 5px #0000001a;
 
+    border-radius: 15px;
     width: 1000px;
 
-    display: flex;
-    padding: 35px;
-    border-radius: 15px;
     margin-top: 40px;
+    padding: 35px;
+   
+}
+
+.container_material {
+    display: flex;
 }
 
 .left_container {

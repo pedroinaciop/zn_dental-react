@@ -4,11 +4,7 @@ import remover from "../../../src/assets/images/lata-de-lixo.png"
 import styled from './Carrinho.module.css';
 
 const Carrinho = () => {
-    const { carrinho, setCarrinho, removerDoCarrinho, totalCarrinho, atualizarQuantidadeProduto } = useCarrinhoContext();
-
-    const removerTodosOsProdutos = (array) => {
-        setCarrinho([]);
-    }
+    const { carrinho, removerTodosOsProdutos, removerDoCarrinho, totalCarrinho, atualizarQuantidadeProduto } = useCarrinhoContext();
 
     return (
         <main className={styled.container_principal}>
@@ -19,7 +15,7 @@ const Carrinho = () => {
                             <img className={styled.imagem_carrinho_vazio} src={carrinhoVazio} alt="Ícone do carrinho vazio" />
                             <p className={styled.texto_carrinho_vazio}>Carrinho vazio</p>
                         </div>
-                    </section>
+                      </section>
                     : carrinho.map((produto) => {
                         return (
                             <section key={produto.id} className={styled.container_carrinho}>
@@ -38,9 +34,11 @@ const Carrinho = () => {
                             </section>
                         )
                     })}
-                    <div>
-                        <p onClick={() => removerTodosOsProdutos()}>Remover</p>
-                    </div>
+                    {carrinho.length > 1 
+                    ? <div className={styled.remover_todos_produtos}>
+                         <button onClick={() => removerTodosOsProdutos()}>Remover itens do carrinho</button>
+                      </div> 
+                    : <span></span>}
             </section>
             <aside className={styled.container_calculo}>
                 <h3>Resumo da compra</h3>

@@ -33,7 +33,7 @@
 }
 
 .produto_valor_carrinho {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	text-align: center;
 	padding: .9rem 0rem;
 }
@@ -72,6 +72,23 @@
 .texto_carrinho_vazio {
 	color: var(--cor-fonte);
 	font-weight: bold;
+}
+
+.remover_todos_produtos {
+	display: flex;
+	justify-content: center;
+}
+
+.remover_todos_produtos button {
+	background: none;
+	color: var(--cor1);
+	font-weight: bold;
+	cursor: pointer;
+	border: 0;
+}
+
+.remover_todos_produtos:hover button {
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------*/

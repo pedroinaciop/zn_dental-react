@@ -11,6 +11,7 @@
     "imagem": "https://pedroinaciop.github.io/zndental/images/charisma_diamond.png",
     "alt": "Imagem Resina Charisma Diamond - Kulzer",
     "categoria": "Resinas",
+    "detalhes": "",
 
     "opcoes": ["A1", "A2", "A3"]
   },
@@ -78,8 +79,8 @@
     "id": 6,
     "nome_produto": "Alginato Tipo I Jeltrate Plus",
     "marca": "Dentsply Sirona",
-    "descricao": "Embalagem com 454g. Sabor tutti frutti",
-    "quantidade_embalagem": "Embalagem com 454g.",
+    "descricao": "Embalagem com 454g.",
+    "quantidade_embalagem": "Embalagem com 454g. Sabor tutti frutti",
     "preco_anterior": 70.00,
     "preco": 65.00,
     "codigo": "A0006",
@@ -91,8 +92,8 @@
     "id": 7,
     "nome_produto": "Alginato Tipo II Jeltrate Dustless",
     "marca": "Dentsply Sirona",
-    "descricao": "Embalagem com 454g. Sabor Menta",
-    "quantidade_embalagem": "Embalagem com 454g.",
+    "descricao": "Embalagem com 454g.",
+    "quantidade_embalagem": "Embalagem com 454g. Sabor Menta",
     "preco_anterior": 70.00,
     "preco": 65.00,
     "codigo": "A0007",
@@ -156,8 +157,8 @@
   "id": 12,
   "nome_produto": "Luva de Procedimento de Látex com Pó",
   "marca": "Supermax",
-  "descricao": "Embalagem com 100 unidades. Escolha o tamanho.",
-  "quantidade_embalagem": "Embalagem com 100 unidades.",
+  "descricao": "Embalagem com 100 unidades.",
+  "quantidade_embalagem": "Embalagem com 100 unidades. Escolha o tamanho.",
   "preco_anterior": 42.99,
   "preco": 37.99,
   "codigo": "A0012",
@@ -171,8 +172,8 @@
   "id": 13,
   "nome_produto": "Propé Descartável 20G",
   "marca": "Fava",
-  "descricao": "Embalagem com 100 unidades. 20g.",
-  "quantidade_embalagem": "Embalagem com 100 unidades.",
+  "descricao": "Embalagem com 100 unidades.",
+  "quantidade_embalagem": "Embalagem com 100 unidades. 20g.",
   "preco_anterior": 34.90,
   "preco": 29.99,
   "codigo": "A0013",
@@ -184,8 +185,8 @@
   "id": 14,
   "nome_produto": "Sugador Odontológico Descartável",
   "marca": "SSPlus",
-  "descricao": "Embalagem com 40 unidades. Colorido.",
-  "quantidade_embalagem": "Embalagem com 40 unidades.",
+  "descricao": "Embalagem com 40 unidades.",
+  "quantidade_embalagem": "Embalagem com 40 unidades. Colorido.",
   "preco_anterior": 10.90,
   "preco": 8.99,
   "codigo": "A0014",
@@ -197,7 +198,7 @@
   "id": 15,
   "nome_produto": "Sugador Odontológico Descartável",
   "marca": "SSPlus",
-  "descricao": "Embalagem com 50 unidades. 12G.",
+  "descricao": "Embalagem com 50 unidades.",
   "quantidade_embalagem": "Embalagem com 50 unidades. 12G.",
   "preco_anterior": 29.90,
   "preco": 24.90,
@@ -217,7 +218,9 @@
   "codigo": "A0016",
   "imagem": "https://pedroinaciop.github.io/zndental/images/autoclave-12l.jpg",
   "alt": "Autoclave Vitale Class 12L - Cristófoli",
-  "categoria": "Equipamentos"
+  "categoria": "Equipamentos",
+
+  "opcoes": ["110v", "220v"]
   },
   {
   "id": 17,
@@ -230,7 +233,9 @@
   "codigo": "A0017",
   "imagem": "https://pedroinaciop.github.io/zndental/images/autoclave-21l.jpg",
   "alt": "Autoclave Vitale Class 21L - Cristófoli",
-  "categoria": "Equipamentos"
+  "categoria": "Equipamentos",
+
+  "opcoes": ["110v", "220v"]
   },
   {
   "id": 18,
@@ -243,7 +248,9 @@
   "codigo": "A0018",
   "imagem": "https://pedroinaciop.github.io/zndental/images/seladora.jpg",
   "alt": "Seladora - Cristófoli",
-  "categoria": "Equipamentos"
+  "categoria": "Equipamentos",
+
+  "opcoes": ["110v", "220v"]
   },
   {
   "id": 19,
@@ -256,7 +263,9 @@
   "codigo": "A0019",
   "imagem": "https://pedroinaciop.github.io/zndental/images/cuba-ultrassonica.jpg",
   "alt": "Cuba Ultrassônica - Cristófoli",
-  "categoria": "Equipamentos"
+  "categoria": "Equipamentos",
+
+  "opcoes": ["110v", "220v"]
   },
   {
   "id": 20,
@@ -269,6 +278,21 @@
   "codigo": "A0020",
   "imagem": "https://pedroinaciop.github.io/zndental/images/destilador-agua.jpg",
   "alt": "Destilador de Água - Cristófoli",
+  "categoria": "Equipamentos",
+
+  "opcoes": ["110v", "220v"]
+  },
+  {
+  "id": 21,
+  "nome_produto": "Fotopolimerizador Valo X",
+  "marca": "Ultradent",
+  "descricao": "Embalagem com 1 fotopolimerizador, 5 lentes, 2 baterias...",
+  "quantidade_embalagem": "Embalagem com 1 fotopolimerizador, 5 lentes, 2 baterias, 1 carregador de bateria, 1 fonte de energia, 1 adaptador de cabo, 1 suporte de fixação, 1 protetor de luz azul e 1 amostra de barreira protetora.",
+  "preco_anterior": 13899.90,
+  "preco": 12899.90,
+  "codigo": "A0021",
+  "imagem": "https://pedroinaciop.github.io/zndental/images/fotopolimerizador-valo-x.jpg",
+  "alt": "Fotopolimerizador Valo X - Ultradent",
   "categoria": "Equipamentos"
   }
 ]
