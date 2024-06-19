@@ -1,6 +1,6 @@
-import carrinhoVazio from "../../../src/assets/images/carrinho-vazio.svg";
+import carrinhoVazio from "../../../src/assets/images/icons/carrinho-vazio.svg";
 import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
-import remover from "../../../src/assets/images/lata-de-lixo.png"
+import remover from "../../../src/assets/images/icons/lata-de-lixo.png"
 import styled from './Carrinho.module.css';
 
 const Carrinho = () => {

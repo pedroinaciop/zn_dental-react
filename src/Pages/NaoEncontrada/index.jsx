@@ -1,5 +1,5 @@
 import styles from './NaoEncontrada.module.css';
-import erro from '../../assets/images/404.svg';
+import erro from '../../assets/images/icons/404.svg';
 
 const NaoEncontrada = () => {
      return (

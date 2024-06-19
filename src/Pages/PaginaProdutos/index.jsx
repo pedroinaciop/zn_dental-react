@@ -22,8 +22,8 @@ const PaginaProdutos = () => {
     const recomendados = materiais.filter(material => (material.categoria === "Resinas") && (material.id !== Number(parametros.id)));
     
     return (
-        <>
-            <main className={styled.container}>
+        <main className={styled.principal}>
+            <section className={styled.container}>
                 <div className={styled.container_material}>
                     <figure className={styled.left_container}>
                         <img className={styled.img_material} src={material.imagem} alt={material.alt} />
@@ -88,11 +88,9 @@ const PaginaProdutos = () => {
                         </section>
                     </section>
                 </div>              
-            </main>
-            <section>
+            </section>
                 <Produtos array={recomendados} />
-            </section>  
-         </>
+        </main>
     );
 };
 

@@ -1,3 +1,7 @@
+.principal {
+    width: 1070px;
+}
+
 .container {
     color: var(--cor-fonte);
     background-color: #FFFFFF;
@@ -8,7 +12,6 @@
 
     margin-top: 40px;
     padding: 35px;
-   
 }
 
 .container_material {

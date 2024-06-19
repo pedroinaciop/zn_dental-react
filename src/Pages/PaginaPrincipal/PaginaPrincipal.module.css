@@ -1,8 +1,15 @@
 .containerPrincipal {
-    width: 78rem;
+    display: grid;
+	justify-content: center;
 }
 
 .tituloProdutos {
+	font-size: 20px;
 	color: var(--cor1);
-	padding: 20px 20px 20px 90px;
+	padding: 20px;
+}
+
+.carrossel {
+	display: flex;
+	justify-content: center;
 }
