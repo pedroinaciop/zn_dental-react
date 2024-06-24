@@ -1,6 +1,6 @@
 #   ZN Dental | Produtos Odontológicos LTDA
 
-Projeto pessoal feito em HTML, CSS e React onde testo meus recentes conhecimentos em consumir dados em uma API, métodos de arrays - (map, reduce e filter) e Context API.
+Projeto pessoal feito em React com base em um projeto que eu havia feito anteriormente, porém com as facilidades do React. Nele testo meus recentes conhecimentos na tecnologia, como métodos de arrays (map, reduce, filter) e Context API.
 
 ## 🚀 Começando
 
