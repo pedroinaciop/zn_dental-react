@@ -1,3 +1,13 @@
+/* Componente Bloco */
+/* .btn {} */
+
+/* Elemento que depende do bloco */ 
+/* .btn__price {} */
+
+/* Modificador que estiliza o bloco */
+/* .btn--orange {}  */
+
+
 main {
     width: 1250px;
 
@@ -18,11 +28,11 @@ main {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 1.25rem;
-    width: 1060px;
+    width: 1056px;
 
-    padding: .9rem;
+    padding: 0rem .5rem;
 }
 
 .container__nicho {
@@ -30,6 +40,7 @@ main {
     width: 11rem;
     padding: .6rem;
 
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: .6rem;
@@ -40,9 +51,9 @@ main {
 }
 
 .nome_produto {
-    height: 4rem;
-
     color: var(--cor0);
+    
+    height: 4rem;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -52,15 +63,13 @@ main {
     width: 11rem;
 
     display: flex;
-
     align-items: center;
 }
 
 .nicho__imagem__img {
     height: 10rem;
-    width: 11.25rem;
+    width: 10rem;
 }
-
 
 .nicho__informacoes {
     display: flex;
@@ -117,10 +126,45 @@ a {
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.194);
 
     text-align: center;
+    font-weight: bold;
     font-size: 1.3rem;
     cursor: pointer;
 }
 
 .comprar:hover {
     background-color: var(--cor1);
+}
+
+.opcoesProduto {
+    position: absolute;
+    left: 196px;
+    bottom: 25px;
+    z-index: 1;
+
+    height: 23rem;
+    width: 11rem;
+    padding: .6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    background-color: var(--cor4);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.325);
+    border-radius: 0rem .6rem .6rem 0rem;
+}
+
+.quantidadeEBotao {
+    display: flex;
+    gap: 10px;
+}
+
+.quantidadeEBotao > input {
+    width: 50%;
+    height: 90%;
+}
+
+.quantidadeEBotao > button {
+    width: 50%;
+    height: 100%;
 }

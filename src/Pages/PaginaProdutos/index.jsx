@@ -17,12 +17,15 @@ const PaginaProdutos = () => {
         return <NaoEncontrada />;
     }
 
-    const valor_economizado = material.preco_anterior - material.preco;
+    const valor_economizado = material.preco_anterior - material.preco;    
     
-    const recomendados = materiais.filter(material => (material.categoria === "Resinas") && (material.id !== Number(parametros.id)));
+    const recomendados = materiais.filter(m => 
+        m.categoria === material.categoria && m.id !== Number(parametros.id)
+    );  
     
     return (
         <main className={styled.principal}>
+            
             <section className={styled.container}>
                 <div className={styled.container_material}>
                     <figure className={styled.left_container}>
@@ -43,9 +46,9 @@ const PaginaProdutos = () => {
                         <div className={styled.opcoes}>
                             {material.opcoes && material.opcoes.length > 0 
                             ? (<>
-                                <h3 className={styled.titulo_opcoes}>Escolha<span className={styled.obrigatorio}>*</span></h3>
+                                <h3 className={styled.titulo_opcoes}>Escolha uma opção<span className={styled.obrigatorio}>*</span></h3>
                                     <select value={opcaoSelecionada} onChange={identificadorChangeOpcaoSelecionada} required>
-                                        <option key="Escolha uma cor" value="Escolha uma cor" selected>Escolha uma cor</option>
+                                        <option key="Escolha uma opção" value="Escolha uma opção" selected>Escolha uma opção</option>
                                         {material.opcoes.map((opcao) => (
                                             <option key={opcao} value={opcao}>{opcao}</option>
                                             ))}
@@ -89,6 +92,7 @@ const PaginaProdutos = () => {
                     </section>
                 </div>              
             </section>
+            <h2 className={styled.titulo_recomendados}>Produtos visitados por quem procura este item</h2>
                 <Produtos array={recomendados} />
         </main>
     );

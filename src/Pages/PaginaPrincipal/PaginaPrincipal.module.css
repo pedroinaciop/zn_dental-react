@@ -5,8 +5,8 @@
 
 .tituloProdutos {
 	font-size: 20px;
-	color: var(--cor1);
-	padding: 20px;
+    padding: 30px 10px;
+    color: var(--cor1);
 }
 
 .carrossel {

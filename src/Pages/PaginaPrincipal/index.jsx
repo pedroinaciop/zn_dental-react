@@ -7,7 +7,6 @@ const PaginaPrincipal = () => {
 
     return (
         <main className={styled.containerPrincipal}>
-            <img src={carrossel} alt="" className={styled.carrossel}/>
             <h2 className={styled.tituloProdutos}>Os produtos mais vendidos, com ofertas imperdíveis!</h2>
             <Produtos array={materiais} />
         </main>

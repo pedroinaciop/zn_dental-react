@@ -20,7 +20,7 @@ export const useCarrinhoContext = () => {
         }
         setQuantidade(1);
         setOpcaoSelecionada("Escolha uma cor");
-    }
+    };
 
     function removerDoCarrinho(produto) {
         Swal.fire({
@@ -47,7 +47,7 @@ export const useCarrinhoContext = () => {
                 });
             }
           });
-    }
+    };
 
     const atualizarQuantidadeProduto = (id, novaQuantidade) => {
         setCarrinho((carrinhoAtual) =>
@@ -65,7 +65,7 @@ export const useCarrinhoContext = () => {
         setOpcaoSelecionada(event.target.value);
     };
 
-    const removerTodosOsProdutos = (array) => {
+    const removerTodosOsProdutos = () => {
         Swal.fire({
             title: "Você tem certeza?",
             text: "Todos os produtos serão removidos",
@@ -84,6 +84,10 @@ export const useCarrinhoContext = () => {
                 });
             }
           });
+    };
+
+    const mostrarOpcoes = () => {
+
     }
 
     useEffect(() => {
@@ -104,6 +108,7 @@ export const useCarrinhoContext = () => {
         setQuantidade,
         identificadorChangeQuantidade,
 
+        mostrarOpcoes,
         opcaoSelecionada,
         setOpcaoSelecionada,
         identificadorChangeOpcaoSelecionada

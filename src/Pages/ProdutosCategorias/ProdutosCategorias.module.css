@@ -4,7 +4,8 @@
 	width: 1250px;
 }
 
-.tituloProdutos {
-	color: var(--cor1);
-	padding: 20px 20px 20px 90px;
+.titulo_categoria {
+	font-size: 20px;
+    padding: 30px 10px;
+    color: var(--cor1);
 }

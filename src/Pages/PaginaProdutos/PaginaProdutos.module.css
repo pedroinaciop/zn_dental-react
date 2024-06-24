@@ -1,5 +1,5 @@
 .principal {
-    width: 1070px;
+    width: 1075px;
 }
 
 .container {
@@ -131,4 +131,10 @@
     border: 2px solid var(--cor1);
     text-align: center;
     padding: 10px 0px;
+}
+
+.titulo_recomendados {
+    font-size: 18px;
+    padding: 30px 10px;
+    color: var(--cor1);
 }

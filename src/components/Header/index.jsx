@@ -1,14 +1,13 @@
 import iconCarrinho from "../../../src/assets/images/icons/icon-carrinho.png";
 import iconCadastro from "../../assets/images/icons/icon-login.png";
-import { CarrinhoContext } from "../../context/CarrinhoContext";
+import { useCarrinhoContext } from "../../hooks/useCarrinhoContext"
 import lupa from "../../assets/images/icons/procurar.png";
 import logo from "../../assets/images/logo-zn.png";
 import { NavLink } from 'react-router-dom';
 import styled from './Header.module.css';
-import { useContext } from "react";
 
 const Header = () => {
-    const { carrinho } = useContext(CarrinhoContext);
+    const { carrinho } = useCarrinhoContext();
 
     return (
         <header>      
