@@ -1,0 +1,56 @@
+.opcoesProduto {
+    position: absolute;
+    left: 196px;
+    bottom: 25px;
+    z-index: 1;
+
+    height: 23rem;
+    width: 11rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    text-align: left;
+    color: var(--cor5); 
+    background-color: var(--cor4);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.325);
+    border-radius: 0rem .6rem .6rem 0rem;
+}
+
+.quantidadeEBotao {
+    display: flex;
+    gap: 10px;
+}
+
+.quantidadeEBotao > input {
+    width: 50%;
+    height: 90%;
+}
+
+.quantidadeEBotao > button {
+    width: 50%;
+    height: 100%;
+}
+
+.comprar {
+    width: 100%;
+
+    border: 0;
+    border-radius: .6rem;
+    padding: 1.2rem;
+    
+    color: var(--cor4);
+    background-color: var(--cor0);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.194);
+
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.comprar:hover {
+    background-color: var(--cor1);
+}

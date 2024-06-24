@@ -1,17 +1,24 @@
 import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
 import { NavLink } from "react-router-dom";
 import styled from "./Produtos.module.css";
+import { useState } from "react";
+import Opcoes from "../Opcoes";
 
 const Produtos = ({ array }) => {
-    const { AdicionarAoCarrinho, opcaoSelecionada, identificadorChangeOpcaoSelecionada, quantidade, identificadorChangeQuantidade } = useCarrinhoContext();
-    
+    const { AdicionarAoCarrinho } = useCarrinhoContext();
+    const [ menuAberto, setMenuAberto ] = useState(null);
+
+    const abrirMenu = (id) => {
+        setMenuAberto(menuAberto === id ? null : id);
+      };
+
     return (
         <section className={styled.container}>
             {array.map((material) => {
                 return (
                     <section key={material.id} className={styled.container__nicho}>
                         <figure className={styled.nicho__imagem}>
-                            <img className={styled.nicho__imagem__img} src={material.imagem} alt={material.alt} />                                
+                            <img className={styled.nicho__imagem__img} src={material.imagem} alt={material.alt} />
                         </figure>
                         <section className={styled.nicho__informacoes}>
                             <p className={styled.nome_produto}>
@@ -23,7 +30,7 @@ const Produtos = ({ array }) => {
                                 {material.descricao}
                             </p>
                             <div className={styled.container_precos_anteriores}>
-                                <p>R$</p>   
+                                <p>R$</p>
                                 <p className={styled.preco_anterior}>
                                     {material.preco_anterior.toFixed(2)}
                                 </p>
@@ -38,46 +45,22 @@ const Produtos = ({ array }) => {
                                 (Cód. ${material.codigo})
                             </p>
                         </section>
-                        {!material.opcoes 
-                        ? <button type="button" className={styled.comprar} onClick={() => AdicionarAoCarrinho({
-                                                                                    id: material.id,
-                                                                                    nome_produto: material.nome_produto,
-                                                                                    marca: material.marca,
-                                                                                    preco: material.preco,
-                                                                                    codigo: material.codigo,
-                                                                                    imagem: material.imagem,
-                                                                                    opcoes: "",
-                                                                                    alt: material.alt,
-                                                                                }, 1)}>
-                            Adicionar
-                          </button> 
-                        : <button type="button" className={styled.comprar}>
-                            Opções
-                          </button>}
-                          {<section className={styled.opcoesProduto}>
-                                <div>
-                                    <h3>Para adicionar ao carrinho:</h3>
-                                    <p>Escolha uma opção: </p>
-                                    <select value={opcaoSelecionada} onChange={identificadorChangeOpcaoSelecionada} required>
-                                        <option key="Escolha uma opção" value="Escolha uma opção" selected>Escolha uma opção</option>                                  
-                                    </select>    
-                                </div>                                                
-                                <div className={styled.quantidadeEBotao}>
-                                    <input type="number" value={quantidade} min={1} onChange={identificadorChangeQuantidade}/>
-                                    <button type="button" className={styled.comprar} onClick={() => AdicionarAoCarrinho({
-                                        id: material.id,
-                                        nome_produto: material.nome_produto,
-                                        marca: material.marca,
-                                        preco: material.preco,
-                                        codigo: material.codigo,
-                                        imagem: material.imagem,
-                                        opcoes: "",
-                                        alt: material.alt,
-                                    }, Number(quantidade))}>
-                                    Adicionar
-                                    </button>                     
-                                </div>   
-                          </section>}
+                        {!material.opcoes
+                            ? <button type="button" className={styled.comprar} onClick={() => AdicionarAoCarrinho({
+                                id: material.id,
+                                nome_produto: material.nome_produto,
+                                marca: material.marca,
+                                preco: material.preco,
+                                codigo: material.codigo,
+                                imagem: material.imagem,
+                                opcoes: "",
+                                alt: material.alt,
+                            }, 1)}>
+                                Adicionar
+                            </button>
+                            : <button type="button" className={styled.comprar} onClick={() => abrirMenu(material.id)}>
+                                Opções {menuAberto === material.id && <Opcoes/>}
+                            </button>}
                     </section>
                 );
             })}

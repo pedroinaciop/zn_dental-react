@@ -86,10 +86,6 @@ export const useCarrinhoContext = () => {
           });
     };
 
-    const mostrarOpcoes = () => {
-
-    }
-
     useEffect(() => {
         const novoTotalCarrinho = carrinho.reduce((acumulador, item) => acumulador + (item.preco * item.quantidade), 0);
         setTotalCarrinho(novoTotalCarrinho);
@@ -108,7 +104,6 @@ export const useCarrinhoContext = () => {
         setQuantidade,
         identificadorChangeQuantidade,
 
-        mostrarOpcoes,
         opcaoSelecionada,
         setOpcaoSelecionada,
         identificadorChangeOpcaoSelecionada
