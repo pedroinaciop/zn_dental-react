@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 
 export const useCarrinhoContext = () => {
     const { carrinho, setCarrinho } = useContext(CarrinhoContext);
+    const { menuAberto, setMenuAberto }  = useContext(CarrinhoContext);
     const { quantidade, setQuantidade } = useContext(CarrinhoContext);
     const { totalCarrinho, setTotalCarrinho } = useContext(CarrinhoContext);
     const { opcaoSelecionada, setOpcaoSelecionada } = useContext(CarrinhoContext);
@@ -11,6 +12,15 @@ export const useCarrinhoContext = () => {
     function AdicionarAoCarrinho(item, quantidade) {
         const novoCarrinho = [...carrinho];
         const existindoIdProduto = novoCarrinho.findIndex((i) => i.id === item.id);
+
+        if (item.opcoes === 'Escolha uma cor') {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Por favor, não esqueça de escolher a cor do seu produto!",
+              });
+              return 0;
+        }
 
         if (existindoIdProduto === -1) {
             setCarrinho([...novoCarrinho, { ...item, quantidade }]);
@@ -20,6 +30,7 @@ export const useCarrinhoContext = () => {
         }
         setQuantidade(1);
         setOpcaoSelecionada("Escolha uma cor");
+        setMenuAberto(null);
     };
 
     function removerDoCarrinho(produto) {
@@ -86,26 +97,35 @@ export const useCarrinhoContext = () => {
           });
     };
 
+    const abrirMenu = (id) => {
+        setMenuAberto(menuAberto === id ? null : id);
+        setQuantidade(1);
+        setOpcaoSelecionada("Escolha uma cor");
+    };
+
     useEffect(() => {
         const novoTotalCarrinho = carrinho.reduce((acumulador, item) => acumulador + (item.preco * item.quantidade), 0);
         setTotalCarrinho(novoTotalCarrinho);
     }, [carrinho, setTotalCarrinho, setCarrinho]);
-    
+
     return {
         carrinho, 
         setCarrinho,
         totalCarrinho,
-        AdicionarAoCarrinho,
-        removerDoCarrinho,
-        removerTodosOsProdutos,
-        atualizarQuantidadeProduto,
-
+        
         quantidade,
         setQuantidade,
-        identificadorChangeQuantidade,
-
+        
         opcaoSelecionada,
         setOpcaoSelecionada,
+        menuAberto,
+        
+        abrirMenu,
+        removerDoCarrinho,
+        AdicionarAoCarrinho,
+        removerTodosOsProdutos,
+        atualizarQuantidadeProduto,
+        identificadorChangeQuantidade,
         identificadorChangeOpcaoSelecionada
     };
 };

@@ -1,16 +1,10 @@
 import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
 import { NavLink } from "react-router-dom";
 import styled from "./Produtos.module.css";
-import { useState } from "react";
 import Opcoes from "../Opcoes";
 
 const Produtos = ({ array }) => {
-    const { AdicionarAoCarrinho } = useCarrinhoContext();
-    const [ menuAberto, setMenuAberto ] = useState(null);
-
-    const abrirMenu = (id) => {
-        setMenuAberto(menuAberto === id ? null : id);
-      };
+    const { AdicionarAoCarrinho, menuAberto, abrirMenu } = useCarrinhoContext();
 
     return (
         <section className={styled.container}>
@@ -59,8 +53,9 @@ const Produtos = ({ array }) => {
                                 Adicionar
                             </button>
                             : <button type="button" className={styled.comprar} onClick={() => abrirMenu(material.id)}>
-                                Opções {menuAberto === material.id && <Opcoes/>}
+                                Opções
                             </button>}
+                            {menuAberto === material.id && <Opcoes material={material}/>}
                     </section>
                 );
             })}

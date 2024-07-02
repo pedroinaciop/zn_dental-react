@@ -1,4 +1,10 @@
-.opcoesProduto {
+.opcoes_produto {
+    background-color: var(--cor4);
+    color: var(--cor5); 
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.325);
+    border-radius: 0rem .6rem .6rem 0rem;
+    text-align: left;
+
     position: absolute;
     left: 196px;
     bottom: 25px;
@@ -11,43 +17,45 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-    text-align: left;
-    color: var(--cor5); 
-    background-color: var(--cor4);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.325);
-    border-radius: 0rem .6rem .6rem 0rem;
 }
 
-.quantidadeEBotao {
+.cabecalho_opcoes {
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
-.quantidadeEBotao > input {
-    width: 50%;
-    height: 90%;
+.cabecalho_opcoes h3 {
+    margin: 10px 0px;
 }
 
-.quantidadeEBotao > button {
-    width: 50%;
+.quantidade_botao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantidade_botao > input {
+    width: 32%;
+    height: 85%;
+}
+
+.quantidade_botao > button {
+    width: 52%;
     height: 100%;
 }
 
 .comprar {
-    width: 100%;
-
-    border: 0;
-    border-radius: .6rem;
-    padding: 1.2rem;
-    
-    color: var(--cor4);
     background-color: var(--cor0);
+    color: var(--cor4);
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.194);
-
     text-align: center;
     font-weight: bold;
     font-size: .8rem;
+
+    width: 100%;
+    border: 0;
+    border-radius: .6rem;
+    padding: 1.2rem;
     cursor: pointer;
 }
 
