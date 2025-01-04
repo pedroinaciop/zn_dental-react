@@ -1,4 +1,4 @@
-#   ZN Dental | Produtos Odontológicos LTDA
+#   ZN Dental | Produtos Odontológicos LTDA (Em desenvolvimento)
 
 Projeto feito em React com base em um projeto que eu havia feito anteriormente, porém com as facilidades do React. Nele testo meus recentes conhecimentos na tecnologia, como métodos de arrays (map, reduce, filter) e Context API.
 
