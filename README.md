@@ -55,7 +55,7 @@ Trazer endereço no usuário conforme CEP.
 
 Acesso ao site do projeto na web
 
-* [ZN Dental | Produtos Odontológicos - link](https://zn-dental-react.vercel.app/) - A biblioteca usada
+* [ZN Dental | Produtos Odontológicos - link](https://zn-dental-react.vercel.app/)
 
 ## ✒️ Autores
 
