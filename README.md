@@ -38,7 +38,7 @@ Calcular valor total dos produtos no carrinho, <br>
 Trazer endereço no usuário conforme CEP.
 ```
 
-# 🎨 Layout
+## 🎨 Layout
 
 ## Web 1
 ![Web 1](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-1.png)
