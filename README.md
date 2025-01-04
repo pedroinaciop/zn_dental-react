@@ -42,7 +42,9 @@ Trazer endereço no usuário conforme CEP.
 
 ![Web 1](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-1.png)
 
+
 ![Web 2](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-2.png)
+
 
 ![Web 3](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-3.png)
 
