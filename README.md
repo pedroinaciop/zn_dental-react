@@ -40,7 +40,6 @@ Trazer endereço no usuário conforme CEP.
 
 ## 🎨 Layout
 
-
 ![Web 1](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-1.png)
 
 ![Web 2](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-2.png)
@@ -50,25 +49,6 @@ Trazer endereço no usuário conforme CEP.
 ## Tecnologias utilizadas
 [![Minhas Habilidades](https://skillicons.dev/icons?i=html,css,react)](https://skillicons.dev)
 
-## 👨‍💻 Autor
-
-Pedro Inácio Penha dos Santos
-
-https://www.linkedin.com/in/pedroinaciop/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 🔗 Link do site
 
 Acesso ao site do projeto na web
@@ -77,4 +57,4 @@ Acesso ao site do projeto na web
 
 ## ✒️ Autores
 
-* **Desenvolvedor** - [Pedro Inácio P.](https://github.com/pedroinaciop)
+* **Desenvolvedor** - [Pedro Inácio P.](https://www.linkedin.com/in/pedroinaciop/)
