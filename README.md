@@ -40,13 +40,13 @@ Trazer endereço no usuário conforme CEP.
 
 ## 🎨 Layout
 
-![Web 1](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-1.png)
+![Web 1](https://github.com/pedroinaciop/portfolio-pedroinaciop/blob/main/images/web-1.png?raw=true)
 
 
-![Web 2](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-2.png)
+![Web 2](https://github.com/pedroinaciop/portfolio-pedroinaciop/blob/main/images/web-2.png?raw=true)
 
 
-![Web 3](https://pedroinaciop.github.io/projeto-site_zndental/dist/images/web-3.png)
+![Web 3](https://github.com/pedroinaciop/portfolio-pedroinaciop/blob/main/images/web-3.png?raw=true)
 
 ## Tecnologias utilizadas
 [![Minhas Habilidades](https://skillicons.dev/icons?i=html,css,react)](https://skillicons.dev)
